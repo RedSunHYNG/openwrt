@@ -1,0 +1,1509 @@
+root@OpenWrt:~# lsmod
+amd_xgbe              110592  0
+ath                    24576  1 ath10k_core
+ath10k_core           364544  1 ath10k_pci
+ath10k_pci             32768  0
+bnx2                   73728  0
+button_hotplug         12288  0
+cdc_ether              12288  1 rndis_host
+cfg80211              286720 10 mt7921_common,iwlmvm,iwldvm,ath10k_core,ath,mwifiex,mt76_connac_lib,mt76,mac80211,iwlwifi
+cmac                   12288  0
+compat                 12288  8 iwlmvm,iwldvm,ath10k_pci,mwifiex_pcie,mwifiex,mac80211,iwlwifi,cfg80211
+crc_ccitt              12288  1 ppp_async
+crypto_acompress       12288  2 lzo,lzo_rle
+drbg                   24576  0
+e1000                  98304  0
+e1000e                176128  0
+ena                    73728  0
+fat                    61440  1 vfat
+forcedeth              61440  0
+hmac                   12288  0
+i2c_dev                12288  0
+igb                   159744  0
+igc                    90112  0
+iwldvm                118784  0
+iwlmvm                266240  0
+iwlwifi               245760  2 iwlmvm,iwldvm
+ixgbe                 217088  0
+jitterentropy_rng      12288  0
+libcrc32c              12288  1 nf_tables
+lzo                    12288  0
+lzo_compress           12288  2 lzo,lzo_rle
+lzo_decompress         12288  2 lzo,lzo_rle
+lzo_rle                12288  0
+mac80211              548864  7 mt7921_common,iwlmvm,iwldvm,ath10k_core,mt792x_lib,mt76_connac_lib,mt76
+mdio                   12288  1 ixgbe
+mii                    12288  1 usbnet
+mt76                   53248  4 mt7921e,mt7921_common,mt792x_lib,mt76_connac_lib
+mt76_connac_lib        45056  3 mt7921e,mt7921_common,mt792x_lib
+mt7921_common          45056  1 mt7921e
+mt7921e                16384  0
+mt792x_lib             28672  2 mt7921e,mt7921_common
+mwifiex               229376  1 mwifiex_pcie
+mwifiex_pcie           36864  0
+nf_conntrack           77824  7 nft_redir,nft_nat,nft_masq,nft_flow_offload,nft_ct,nf_nat,nf_flow_table
+nf_defrag_ipv4         12288  1 nf_conntrack
+nf_defrag_ipv6         16384  1 nf_conntrack
+nf_flow_table          28672  4 nf_flow_table_ipv6,nf_flow_table_ipv4,nf_flow_table_inet,nft_flow_offload
+nf_flow_table_inet     12288  0
+nf_flow_table_ipv4     12288  0
+nf_flow_table_ipv6     12288  0
+nf_log_syslog          16384  0
+nf_nat                 28672  4 nft_redir,nft_nat,nft_masq,nft_chain_nat
+nf_reject_ipv4         12288  2 nft_reject_ipv4,nft_reject_inet
+nf_reject_ipv6         12288  2 nft_reject_ipv6,nft_reject_inet
+nf_tables             180224201 nft_fib_inet,nf_flow_table_ipv6,nf_flow_table_ipv4,nf_flow_table_inet,nft_reject_ipv6,nft_reject_ipv4,nft_reject_inet,nft_reject,nft_redir,nft_quota,nft_objref,nft_numgen,nft_nat,nft_masq,nft_log,nft_limit,nft_hash,nft_flow_offload,nft_fib_ipv6,nft_fib_ipv4,nft_fib,nft_ct,nft_counter,nft_chain_nat
+nfnetlink              16384  1 nf_tables
+nft_chain_nat          12288  2
+nft_counter            12288 17
+nft_ct                 16384  4
+nft_fib                12288  3 nft_fib_inet,nft_fib_ipv6,nft_fib_ipv4
+nft_fib_inet           12288  0
+nft_fib_ipv4           12288  1 nft_fib_inet
+nft_fib_ipv6           12288  1 nft_fib_inet
+nft_flow_offload       12288  0
+nft_hash               12288  0
+nft_limit              12288  5
+nft_log                12288  0
+nft_masq               12288  1
+nft_nat                12288  0
+nft_numgen             12288  0
+nft_objref             12288  0
+nft_quota              12288  0
+nft_redir              12288  0
+nft_reject             12288  3 nft_reject_ipv6,nft_reject_ipv4,nft_reject_inet
+nft_reject_inet        12288  2
+nft_reject_ipv4        12288  0
+nft_reject_ipv6        12288  0
+nls_cp437              16384  1
+nls_iso8859_1          12288  1
+nls_utf8               12288  0
+ppp_async              16384  0
+ppp_generic            32768  3 pppoe,ppp_async,pppox
+pppoe                  16384  0
+pppox                  12288  1 pppoe
+r8169                  77824  0
+realtek                24576  2
+rndis_host             12288  0
+seqiv                  12288  0
+sha512_generic         12288  1 sha512_ssse3
+sha512_ssse3           45056  0
+slhc                   16384  1 ppp_generic
+tg3                   155648  0
+usbnet                 24576  2 rndis_host,cdc_ether
+vfat                   16384  1
+
+
+root@OpenWrt:~# iw list
+Wiphy phy0
+        wiphy index: 0
+        max # scan SSIDs: 4
+        max scan IEs length: 482 bytes
+        max # sched scan SSIDs: 10
+        max # match sets: 16
+        Retry short limit: 7
+        Retry long limit: 4
+        Coverage class: 0 (up to 0m)
+        Device supports AP-side u-APSD.
+        Device supports T-DLS.
+        Available Antennas: TX 0x3 RX 0x3
+        Configured Antennas: TX 0x3 RX 0x3
+        Supported interface modes:
+                 * managed
+                 * AP
+                 * AP/VLAN
+                 * monitor
+                 * P2P-client
+                 * P2P-GO
+        Band 1:
+                Capabilities: 0x9ff
+                        RX LDPC
+                        HT20/HT40
+                        SM Power Save disabled
+                        RX Greenfield
+                        RX HT20 SGI
+                        RX HT40 SGI
+                        TX STBC
+                        RX STBC 1-stream
+                        Max AMSDU length: 7935 bytes
+                        No DSSS/CCK HT40
+                Maximum RX AMPDU length 65535 bytes (exponent: 0x003)
+                Minimum RX AMPDU time spacing: No restriction (0x00)
+                HT TX/RX MCS rate indexes supported: 0-15
+                HE Iftypes: managed
+                        HE MAC Capabilities (0x08011a000040):
+                                +HTC HE Supported
+                                Trigger Frame MAC Padding Duration: 2
+                                OM Control
+                                Maximum A-MPDU Length Exponent: 3
+                                A-MSDU in A-MPDU
+                        HE PHY Capabilities: (0x2a70ce120dc0b3064e3f00):
+                                HE40/2.4GHz
+                                HE160/5GHz
+                                242 tone RUs/2.4GHz
+                                Device Class: 1
+                                LDPC Coding in Payload
+                                HE SU PPDU with 1x HE-LTF and 0.8us GI
+                                NDP with 4x HE-LTF and 3.2us GI
+                                STBC Tx <= 80MHz
+                                STBC Rx <= 80MHz
+                                Full Bandwidth UL MU-MIMO
+                                Partial Bandwidth UL MU-MIMO
+                                DCM Max Constellation: 2
+                                DCM Max Constellation Rx: 2
+                                SU Beamformee
+                                Beamformee STS <= 80Mhz: 3
+                                Ng = 16 SU Feedback
+                                Ng = 16 MU Feedback
+                                Codebook Size SU Feedback
+                                Codebook Size MU Feedback
+                                Triggered CQI Feedback
+                                Partial Bandwidth Extended Range
+                                PPE Threshold Present
+                                Power Boost Factor ar
+                                HE SU PPDU & HE PPDU 4x HE-LTF 0.8us GI
+                                20MHz in 40MHz HE PPDU 2.4GHz
+                                20MHz in 160/80+80MHz HE PPDU
+                                80MHz in 160/80+80MHz HE PPDU
+                                DCM Max BW: 1
+                                Longer Than 16HE SIG-B OFDM Symbols
+                                Non-Triggered CQI Feedback
+                                TX 1024-QAM
+                                RX 1024-QAM
+                                RX Full BW SU Using HE MU PPDU with Compression                                                                    SIGB
+                                RX Full BW SU Using HE MU PPDU with Non-Compres                                                                   sion SIGB
+                        HE RX MCS and NSS set <= 80 MHz
+                                1 streams: MCS 0-11
+                                2 streams: MCS 0-11
+                                3 streams: not supported
+                                4 streams: not supported
+                                5 streams: not supported
+                                6 streams: not supported
+                                7 streams: not supported
+                                8 streams: not supported
+                        HE TX MCS and NSS set <= 80 MHz
+                                1 streams: MCS 0-11
+                                2 streams: MCS 0-11
+                                3 streams: not supported
+                                4 streams: not supported
+                                5 streams: not supported
+                                6 streams: not supported
+                                7 streams: not supported
+                                8 streams: not supported
+                        HE RX MCS and NSS set 160 MHz
+                                1 streams: MCS 0-11
+                                2 streams: MCS 0-11
+                                3 streams: not supported
+                                4 streams: not supported
+                                5 streams: not supported
+                                6 streams: not supported
+                                7 streams: not supported
+                                8 streams: not supported
+                        HE TX MCS and NSS set 160 MHz
+                                1 streams: MCS 0-11
+                                2 streams: MCS 0-11
+                                3 streams: not supported
+                                4 streams: not supported
+                                5 streams: not supported
+                                6 streams: not supported
+                                7 streams: not supported
+                                8 streams: not supported
+                        PPE Threshold 0x39 0x1c 0xc7 0x71 0x1c 0x07
+                EHT Iftypes: managed
+                        EHT MAC Capabilities (0x0000):
+                        EHT PHY Capabilities: (0x0000000000000000):
+                        EHT MCS/NSS: (0x):
+                        EHT bw=160 MHz, max NSS for MCS 8-9: Rx=0, Tx=0
+                        EHT bw=160 MHz, max NSS for MCS 10-11: Rx=0, Tx=0
+                        EHT bw=160 MHz, max NSS for MCS 12-13: Rx=0, Tx=0
+                HE Iftypes: AP
+                        HE MAC Capabilities (0x00011a081044):
+                                +HTC HE Supported
+                                BSR
+                                OM Control
+                                Maximum A-MPDU Length Exponent: 3
+                                BQR
+                                A-MSDU in A-MPDU
+                                OM Control UL MU Data Disable RX
+                        HE PHY Capabilities: (0x0220ce120000a000000c00):
+                                HE40/2.4GHz
+                                LDPC Coding in Payload
+                                NDP with 4x HE-LTF and 3.2us GI
+                                STBC Tx <= 80MHz
+                                STBC Rx <= 80MHz
+                                Full Bandwidth UL MU-MIMO
+                                Partial Bandwidth UL MU-MIMO
+                                DCM Max Constellation: 2
+                                DCM Max Constellation Rx: 2
+                                Partial Bandwidth Extended Range
+                                PPE Threshold Present
+                                TX 1024-QAM
+                                RX 1024-QAM
+                        HE RX MCS and NSS set <= 80 MHz
+                                1 streams: MCS 0-11
+                                2 streams: MCS 0-11
+                                3 streams: not supported
+                                4 streams: not supported
+                                5 streams: not supported
+                                6 streams: not supported
+                                7 streams: not supported
+                                8 streams: not supported
+                        HE TX MCS and NSS set <= 80 MHz
+                                1 streams: MCS 0-11
+                                2 streams: MCS 0-11
+                                3 streams: not supported
+                                4 streams: not supported
+                                5 streams: not supported
+                                6 streams: not supported
+                                7 streams: not supported
+                                8 streams: not supported
+                        PPE Threshold 0x39 0x1c 0xc7 0x71 0x1c 0x07
+                EHT Iftypes: AP
+                        EHT MAC Capabilities (0x0000):
+                        EHT PHY Capabilities: (0x0000000000000000):
+                        EHT MCS/NSS: (0x):
+                        EHT bw=20 MHz, max NSS for MCS 0-7: Rx=0, Tx=0
+                        EHT bw=20 MHz, max NSS for MCS 8-9: Rx=0, Tx=0
+                        EHT bw=20 MHz, max NSS for MCS 10-11: Rx=0, Tx=0
+                        EHT bw=20 MHz, max NSS for MCS 12-13: Rx=0, Tx=0
+                Frequencies:
+                        * 2412 MHz [1] (20.0 dBm)
+                        * 2417 MHz [2] (20.0 dBm)
+                        * 2422 MHz [3] (20.0 dBm)
+                        * 2427 MHz [4] (20.0 dBm)
+                        * 2432 MHz [5] (20.0 dBm)
+                        * 2437 MHz [6] (20.0 dBm)
+                        * 2442 MHz [7] (20.0 dBm)
+                        * 2447 MHz [8] (20.0 dBm)
+                        * 2452 MHz [9] (20.0 dBm)
+                        * 2457 MHz [10] (20.0 dBm)
+                        * 2462 MHz [11] (20.0 dBm)
+                        * 2467 MHz [12] (20.0 dBm) (no IR)
+                        * 2472 MHz [13] (20.0 dBm) (no IR)
+                        * 2484 MHz [14] (20.0 dBm) (no IR)
+        Band 2:
+                Capabilities: 0x9ff
+                        RX LDPC
+                        HT20/HT40
+                        SM Power Save disabled
+                        RX Greenfield
+                        RX HT20 SGI
+                        RX HT40 SGI
+                        TX STBC
+                        RX STBC 1-stream
+                        Max AMSDU length: 7935 bytes
+                        No DSSS/CCK HT40
+                Maximum RX AMPDU length 65535 bytes (exponent: 0x003)
+                Minimum RX AMPDU time spacing: No restriction (0x00)
+                HT TX/RX MCS rate indexes supported: 0-15
+                VHT Capabilities (0x339071f6):
+                        Max MPDU length: 11454
+                        Supported Channel Width: 160 MHz
+                        RX LDPC
+                        short GI (80 MHz)
+                        short GI (160/80+80 MHz)
+                        TX STBC
+                        SU Beamformee
+                        MU Beamformee
+                        RX antenna pattern consistency
+                        TX antenna pattern consistency
+                VHT RX MCS set:
+                        1 streams: MCS 0-9
+                        2 streams: MCS 0-9
+                        3 streams: not supported
+                        4 streams: not supported
+                        5 streams: not supported
+                        6 streams: not supported
+                        7 streams: not supported
+                        8 streams: not supported
+                VHT RX highest supported: 0 Mbps
+                VHT TX MCS set:
+                        1 streams: MCS 0-9
+                        2 streams: MCS 0-9
+                        3 streams: not supported
+                        4 streams: not supported
+                        5 streams: not supported
+                        6 streams: not supported
+                        7 streams: not supported
+                        8 streams: not supported
+                VHT TX highest supported: 0 Mbps
+                VHT extended NSS: supported
+                HE Iftypes: managed
+                        HE MAC Capabilities (0x08011a000040):
+                                +HTC HE Supported
+                                Trigger Frame MAC Padding Duration: 2
+                                OM Control
+                                Maximum A-MPDU Length Exponent: 3
+                                A-MSDU in A-MPDU
+                        HE PHY Capabilities: (0x4c70ce120dc0b3064e3f00):
+                                HE40/HE80/5GHz
+                                HE160/5GHz
+                                242 tone RUs/5GHz
+                                Device Class: 1
+                                LDPC Coding in Payload
+                                HE SU PPDU with 1x HE-LTF and 0.8us GI
+                                NDP with 4x HE-LTF and 3.2us GI
+                                STBC Tx <= 80MHz
+                                STBC Rx <= 80MHz
+                                Full Bandwidth UL MU-MIMO
+                                Partial Bandwidth UL MU-MIMO
+                                DCM Max Constellation: 2
+                                DCM Max Constellation Rx: 2
+                                SU Beamformee
+                                Beamformee STS <= 80Mhz: 3
+                                Ng = 16 SU Feedback
+                                Ng = 16 MU Feedback
+                                Codebook Size SU Feedback
+                                Codebook Size MU Feedback
+                                Triggered CQI Feedback
+                                Partial Bandwidth Extended Range
+                                PPE Threshold Present
+                                Power Boost Factor ar
+                                HE SU PPDU & HE PPDU 4x HE-LTF 0.8us GI
+                                20MHz in 40MHz HE PPDU 2.4GHz
+                                20MHz in 160/80+80MHz HE PPDU
+                                80MHz in 160/80+80MHz HE PPDU
+                                DCM Max BW: 1
+                                Longer Than 16HE SIG-B OFDM Symbols
+                                Non-Triggered CQI Feedback
+                                TX 1024-QAM
+                                RX 1024-QAM
+                                RX Full BW SU Using HE MU PPDU with Compression                                                                    SIGB
+                                RX Full BW SU Using HE MU PPDU with Non-Compres                                                                   sion SIGB
+                        HE RX MCS and NSS set <= 80 MHz
+                                1 streams: MCS 0-11
+                                2 streams: MCS 0-11
+                                3 streams: not supported
+                                4 streams: not supported
+                                5 streams: not supported
+                                6 streams: not supported
+                                7 streams: not supported
+                                8 streams: not supported
+                        HE TX MCS and NSS set <= 80 MHz
+                                1 streams: MCS 0-11
+                                2 streams: MCS 0-11
+                                3 streams: not supported
+                                4 streams: not supported
+                                5 streams: not supported
+                                6 streams: not supported
+                                7 streams: not supported
+                                8 streams: not supported
+                        HE RX MCS and NSS set 160 MHz
+                                1 streams: MCS 0-11
+                                2 streams: MCS 0-11
+                                3 streams: not supported
+                                4 streams: not supported
+                                5 streams: not supported
+                                6 streams: not supported
+                                7 streams: not supported
+                                8 streams: not supported
+                        HE TX MCS and NSS set 160 MHz
+                                1 streams: MCS 0-11
+                                2 streams: MCS 0-11
+                                3 streams: not supported
+                                4 streams: not supported
+                                5 streams: not supported
+                                6 streams: not supported
+                                7 streams: not supported
+                                8 streams: not supported
+                        PPE Threshold 0x39 0x1c 0xc7 0x71 0x1c 0x07
+                EHT Iftypes: managed
+                        EHT MAC Capabilities (0x0000):
+                        EHT PHY Capabilities: (0x0000000000000000):
+                        EHT MCS/NSS: (0x):
+                        EHT bw <= 80 MHz, max NSS for MCS 8-9: Rx=0, Tx=0
+                        EHT bw <= 80 MHz, max NSS for MCS 10-11: Rx=0, Tx=0
+                        EHT bw <= 80 MHz, max NSS for MCS 12-13: Rx=0, Tx=0
+                        EHT bw=160 MHz, max NSS for MCS 8-9: Rx=0, Tx=0
+                        EHT bw=160 MHz, max NSS for MCS 10-11: Rx=0, Tx=0
+                        EHT bw=160 MHz, max NSS for MCS 12-13: Rx=0, Tx=0
+                HE Iftypes: AP
+                        HE MAC Capabilities (0x00011a081044):
+                                +HTC HE Supported
+                                BSR
+                                OM Control
+                                Maximum A-MPDU Length Exponent: 3
+                                BQR
+                                A-MSDU in A-MPDU
+                                OM Control UL MU Data Disable RX
+                        HE PHY Capabilities: (0x0420ce120000a000000c00):
+                                HE40/HE80/5GHz
+                                LDPC Coding in Payload
+                                NDP with 4x HE-LTF and 3.2us GI
+                                STBC Tx <= 80MHz
+                                STBC Rx <= 80MHz
+                                Full Bandwidth UL MU-MIMO
+                                Partial Bandwidth UL MU-MIMO
+                                DCM Max Constellation: 2
+                                DCM Max Constellation Rx: 2
+                                Partial Bandwidth Extended Range
+                                PPE Threshold Present
+                                TX 1024-QAM
+                                RX 1024-QAM
+                        HE RX MCS and NSS set <= 80 MHz
+                                1 streams: MCS 0-11
+                                2 streams: MCS 0-11
+                                3 streams: not supported
+                                4 streams: not supported
+                                5 streams: not supported
+                                6 streams: not supported
+                                7 streams: not supported
+                                8 streams: not supported
+                        HE TX MCS and NSS set <= 80 MHz
+                                1 streams: MCS 0-11
+                                2 streams: MCS 0-11
+                                3 streams: not supported
+                                4 streams: not supported
+                                5 streams: not supported
+                                6 streams: not supported
+                                7 streams: not supported
+                                8 streams: not supported
+                        PPE Threshold 0x39 0x1c 0xc7 0x71 0x1c 0x07
+                EHT Iftypes: AP
+                        EHT MAC Capabilities (0x0000):
+                        EHT PHY Capabilities: (0x0000000000000000):
+                        EHT MCS/NSS: (0x):
+                        EHT bw <= 80 MHz, max NSS for MCS 8-9: Rx=0, Tx=0
+                        EHT bw <= 80 MHz, max NSS for MCS 10-11: Rx=0, Tx=0
+                        EHT bw <= 80 MHz, max NSS for MCS 12-13: Rx=0, Tx=0
+                Frequencies:
+                        * 5180 MHz [36] (20.0 dBm)
+                        * 5200 MHz [40] (20.0 dBm)
+                        * 5220 MHz [44] (20.0 dBm)
+                        * 5240 MHz [48] (20.0 dBm)
+                        * 5260 MHz [52] (20.0 dBm) (no IR, radar detection)
+                        * 5280 MHz [56] (20.0 dBm) (no IR, radar detection)
+                        * 5300 MHz [60] (20.0 dBm) (no IR, radar detection)
+                        * 5320 MHz [64] (20.0 dBm) (no IR, radar detection)
+                        * 5500 MHz [100] (20.0 dBm) (no IR, radar detection)
+                        * 5520 MHz [104] (20.0 dBm) (no IR, radar detection)
+                        * 5540 MHz [108] (20.0 dBm) (no IR, radar detection)
+                        * 5560 MHz [112] (20.0 dBm) (no IR, radar detection)
+                        * 5580 MHz [116] (20.0 dBm) (no IR, radar detection)
+                        * 5600 MHz [120] (20.0 dBm) (no IR, radar detection)
+                        * 5620 MHz [124] (20.0 dBm) (no IR, radar detection)
+                        * 5640 MHz [128] (20.0 dBm) (no IR, radar detection)
+                        * 5660 MHz [132] (20.0 dBm) (no IR, radar detection)
+                        * 5680 MHz [136] (20.0 dBm) (no IR, radar detection)
+                        * 5700 MHz [140] (20.0 dBm) (no IR, radar detection)
+                        * 5720 MHz [144] (20.0 dBm) (no IR, radar detection)
+                        * 5745 MHz [149] (20.0 dBm)
+                        * 5765 MHz [153] (20.0 dBm) (no IR)
+                        * 5785 MHz [157] (20.0 dBm)
+                        * 5805 MHz [161] (20.0 dBm)
+                        * 5825 MHz [165] (20.0 dBm) (no IR)
+                        * 5845 MHz [169] (disabled)
+                        * 5865 MHz [173] (disabled)
+                        * 5885 MHz [177] (disabled)
+        Band 4:
+                HE Iftypes: managed
+                        HE MAC Capabilities (0x08011a000040):
+                                +HTC HE Supported
+                                Trigger Frame MAC Padding Duration: 2
+                                OM Control
+                                Maximum A-MPDU Length Exponent: 3
+                                A-MSDU in A-MPDU
+                        HE PHY Capabilities: (0x4c70ce120dc0b3064e3f00):
+                                HE40/HE80/5GHz
+                                HE160/5GHz
+                                242 tone RUs/5GHz
+                                Device Class: 1
+                                LDPC Coding in Payload
+                                HE SU PPDU with 1x HE-LTF and 0.8us GI
+                                NDP with 4x HE-LTF and 3.2us GI
+                                STBC Tx <= 80MHz
+                                STBC Rx <= 80MHz
+                                Full Bandwidth UL MU-MIMO
+                                Partial Bandwidth UL MU-MIMO
+                                DCM Max Constellation: 2
+                                DCM Max Constellation Rx: 2
+                                SU Beamformee
+                                Beamformee STS <= 80Mhz: 3
+                                Ng = 16 SU Feedback
+                                Ng = 16 MU Feedback
+                                Codebook Size SU Feedback
+                                Codebook Size MU Feedback
+                                Triggered CQI Feedback
+                                Partial Bandwidth Extended Range
+                                PPE Threshold Present
+                                Power Boost Factor ar
+                                HE SU PPDU & HE PPDU 4x HE-LTF 0.8us GI
+                                20MHz in 40MHz HE PPDU 2.4GHz
+                                20MHz in 160/80+80MHz HE PPDU
+                                80MHz in 160/80+80MHz HE PPDU
+                                DCM Max BW: 1
+                                Longer Than 16HE SIG-B OFDM Symbols
+                                Non-Triggered CQI Feedback
+                                TX 1024-QAM
+                                RX 1024-QAM
+                                RX Full BW SU Using HE MU PPDU with Compression                                                                    SIGB
+                                RX Full BW SU Using HE MU PPDU with Non-Compres                                                                   sion SIGB
+                        HE RX MCS and NSS set <= 80 MHz
+                                1 streams: MCS 0-11
+                                2 streams: MCS 0-11
+                                3 streams: not supported
+                                4 streams: not supported
+                                5 streams: not supported
+                                6 streams: not supported
+                                7 streams: not supported
+                                8 streams: not supported
+                        HE TX MCS and NSS set <= 80 MHz
+                                1 streams: MCS 0-11
+                                2 streams: MCS 0-11
+                                3 streams: not supported
+                                4 streams: not supported
+                                5 streams: not supported
+                                6 streams: not supported
+                                7 streams: not supported
+                                8 streams: not supported
+                        HE RX MCS and NSS set 160 MHz
+                                1 streams: MCS 0-11
+                                2 streams: MCS 0-11
+                                3 streams: not supported
+                                4 streams: not supported
+                                5 streams: not supported
+                                6 streams: not supported
+                                7 streams: not supported
+                                8 streams: not supported
+                        HE TX MCS and NSS set 160 MHz
+                                1 streams: MCS 0-11
+                                2 streams: MCS 0-11
+                                3 streams: not supported
+                                4 streams: not supported
+                                5 streams: not supported
+                                6 streams: not supported
+                                7 streams: not supported
+                                8 streams: not supported
+                        PPE Threshold 0x39 0x1c 0xc7 0x71 0x1c 0x07
+                EHT Iftypes: managed
+                        EHT MAC Capabilities (0x0000):
+                        EHT PHY Capabilities: (0x0000000000000000):
+                        EHT MCS/NSS: (0x):
+                        EHT bw <= 80 MHz, max NSS for MCS 8-9: Rx=0, Tx=0
+                        EHT bw <= 80 MHz, max NSS for MCS 10-11: Rx=0, Tx=0
+                        EHT bw <= 80 MHz, max NSS for MCS 12-13: Rx=0, Tx=0
+                        EHT bw=160 MHz, max NSS for MCS 8-9: Rx=0, Tx=0
+                        EHT bw=160 MHz, max NSS for MCS 10-11: Rx=0, Tx=0
+                        EHT bw=160 MHz, max NSS for MCS 12-13: Rx=0, Tx=0
+                HE Iftypes: AP
+                        HE MAC Capabilities (0x00011a081044):
+                                +HTC HE Supported
+                                BSR
+                                OM Control
+                                Maximum A-MPDU Length Exponent: 3
+                                BQR
+                                A-MSDU in A-MPDU
+                                OM Control UL MU Data Disable RX
+                        HE PHY Capabilities: (0x0420ce120000a000000c00):
+                                HE40/HE80/5GHz
+                                LDPC Coding in Payload
+                                NDP with 4x HE-LTF and 3.2us GI
+                                STBC Tx <= 80MHz
+                                STBC Rx <= 80MHz
+                                Full Bandwidth UL MU-MIMO
+                                Partial Bandwidth UL MU-MIMO
+                                DCM Max Constellation: 2
+                                DCM Max Constellation Rx: 2
+                                Partial Bandwidth Extended Range
+                                PPE Threshold Present
+                                TX 1024-QAM
+                                RX 1024-QAM
+                        HE RX MCS and NSS set <= 80 MHz
+                                1 streams: MCS 0-11
+                                2 streams: MCS 0-11
+                                3 streams: not supported
+                                4 streams: not supported
+                                5 streams: not supported
+                                6 streams: not supported
+                                7 streams: not supported
+                                8 streams: not supported
+                        HE TX MCS and NSS set <= 80 MHz
+                                1 streams: MCS 0-11
+                                2 streams: MCS 0-11
+                                3 streams: not supported
+                                4 streams: not supported
+                                5 streams: not supported
+                                6 streams: not supported
+                                7 streams: not supported
+                                8 streams: not supported
+                        PPE Threshold 0x39 0x1c 0xc7 0x71 0x1c 0x07
+                EHT Iftypes: AP
+                        EHT MAC Capabilities (0x0000):
+                        EHT PHY Capabilities: (0x0000000000000000):
+                        EHT MCS/NSS: (0x):
+                        EHT bw <= 80 MHz, max NSS for MCS 8-9: Rx=0, Tx=0
+                        EHT bw <= 80 MHz, max NSS for MCS 10-11: Rx=0, Tx=0
+                        EHT bw <= 80 MHz, max NSS for MCS 12-13: Rx=0, Tx=0
+                Frequencies:
+                        * 5955 MHz [1] (disabled)
+                        * 5975 MHz [5] (disabled)
+                        * 5995 MHz [9] (disabled)
+                        * 6015 MHz [13] (disabled)
+                        * 6035 MHz [17] (disabled)
+                        * 6055 MHz [21] (disabled)
+                        * 6075 MHz [25] (disabled)
+                        * 6095 MHz [29] (disabled)
+                        * 6115 MHz [33] (disabled)
+                        * 6135 MHz [37] (disabled)
+                        * 6155 MHz [41] (disabled)
+                        * 6175 MHz [45] (disabled)
+                        * 6195 MHz [49] (disabled)
+                        * 6215 MHz [53] (disabled)
+                        * 6235 MHz [57] (disabled)
+                        * 6255 MHz [61] (disabled)
+                        * 6275 MHz [65] (disabled)
+                        * 6295 MHz [69] (disabled)
+                        * 6315 MHz [73] (disabled)
+                        * 6335 MHz [77] (disabled)
+                        * 6355 MHz [81] (disabled)
+                        * 6375 MHz [85] (disabled)
+                        * 6395 MHz [89] (disabled)
+                        * 6415 MHz [93] (disabled)
+                        * 6435 MHz [97] (disabled)
+                        * 6455 MHz [101] (disabled)
+                        * 6475 MHz [105] (disabled)
+                        * 6495 MHz [109] (disabled)
+                        * 6515 MHz [113] (disabled)
+                        * 6535 MHz [117] (disabled)
+                        * 6555 MHz [121] (disabled)
+                        * 6575 MHz [125] (disabled)
+                        * 6595 MHz [129] (disabled)
+                        * 6615 MHz [133] (disabled)
+                        * 6635 MHz [137] (disabled)
+                        * 6655 MHz [141] (disabled)
+                        * 6675 MHz [145] (disabled)
+                        * 6695 MHz [149] (disabled)
+                        * 6715 MHz [153] (disabled)
+                        * 6735 MHz [157] (disabled)
+                        * 6755 MHz [161] (disabled)
+                        * 6775 MHz [165] (disabled)
+                        * 6795 MHz [169] (disabled)
+                        * 6815 MHz [173] (disabled)
+                        * 6835 MHz [177] (disabled)
+                        * 6855 MHz [181] (disabled)
+                        * 6875 MHz [185] (disabled)
+                        * 6895 MHz [189] (disabled)
+                        * 6915 MHz [193] (disabled)
+                        * 6935 MHz [197] (disabled)
+                        * 6955 MHz [201] (disabled)
+                        * 6975 MHz [205] (disabled)
+                        * 6995 MHz [209] (disabled)
+                        * 7015 MHz [213] (disabled)
+                        * 7035 MHz [217] (disabled)
+                        * 7055 MHz [221] (disabled)
+                        * 7075 MHz [225] (disabled)
+                        * 7095 MHz [229] (disabled)
+                        * 7115 MHz [233] (disabled)
+        valid interface combinations:
+                 * #{ managed, P2P-client } <= 2, #{ AP, P2P-GO } <= 1,
+                   total <= 2, #channels <= 2
+        HT Capability overrides:
+                 * MCS: ff ff ff ff ff ff ff ff ff ff
+                 * maximum A-MSDU length
+                 * supported channel width
+                 * short GI for 40 MHz
+                 * max A-MPDU length exponent
+                 * min MPDU start spacing
+        max # scan plans: 1
+        max scan plan interval: 65535
+        max scan plan iterations: 0
+        Supported extended features:
+                * [ RRM ]: RRM
+                * [ SET_SCAN_DWELL ]: scan dwell setting
+                * [ BEACON_RATE_LEGACY ]: legacy beacon rate setting
+                * [ BEACON_RATE_HT ]: HT beacon rate setting
+                * [ BEACON_RATE_VHT ]: VHT beacon rate setting
+                * [ FILS_STA ]: STA FILS (Fast Initial Link Setup)
+                * [ CQM_RSSI_LIST ]: multiple CQM_RSSI_THOLD records
+                * [ CONTROL_PORT_OVER_NL80211 ]: control port over nl80211
+                * [ ACK_SIGNAL_SUPPORT ]: ack signal level support
+                * [ TXQS ]: FQ-CoDel-enabled intermediate TXQs
+                * [ CAN_REPLACE_PTK0 ]: can safely replace PTK 0 when rekeying
+                * [ AIRTIME_FAIRNESS ]: airtime fairness scheduling
+                * [ AQL ]: Airtime Queue Limits (AQL)
+                * [ CONTROL_PORT_NO_PREAUTH ]: disable pre-auth over nl80211 co                                                                   ntrol port support
+                * [ SCAN_FREQ_KHZ ]: scan on kHz frequency support
+                * [ CONTROL_PORT_OVER_NL80211_TX_STATUS ]: tx status for nl8021                                                                   1 control port support
+                * [ BEACON_RATE_HE ]: HE beacon rate support (AP/mesh)
+
+root@OpenWrt:~# lspci
+00:00.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Device 14e8
+00:00.2 IOMMU: Advanced Micro Devices, Inc. [AMD] Device 14e9
+00:01.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Device 14ea
+00:01.2 PCI bridge: Advanced Micro Devices, Inc. [AMD] Device 14ee
+00:01.3 PCI bridge: Advanced Micro Devices, Inc. [AMD] Device 14ee
+00:02.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Device 14ea
+00:02.1 PCI bridge: Advanced Micro Devices, Inc. [AMD] Device 14ee
+00:02.2 PCI bridge: Advanced Micro Devices, Inc. [AMD] Device 14ee
+00:03.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Device 14ea
+00:03.1 PCI bridge: Advanced Micro Devices, Inc. [AMD] Family 19h USB4/Thunderbolt PCIe tunnel
+00:04.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Device 14ea
+00:08.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Device 14ea
+00:08.1 PCI bridge: Advanced Micro Devices, Inc. [AMD] Device 14eb
+00:08.2 PCI bridge: Advanced Micro Devices, Inc. [AMD] Device 14eb
+00:08.3 PCI bridge: Advanced Micro Devices, Inc. [AMD] Device 14eb
+00:14.0 SMBus: Advanced Micro Devices, Inc. [AMD] FCH SMBus Controller (rev 71)
+00:14.3 ISA bridge: Advanced Micro Devices, Inc. [AMD] FCH LPC Bridge (rev 51)
+00:18.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Device 14f0
+00:18.1 Host bridge: Advanced Micro Devices, Inc. [AMD] Device 14f1
+00:18.2 Host bridge: Advanced Micro Devices, Inc. [AMD] Device 14f2
+00:18.3 Host bridge: Advanced Micro Devices, Inc. [AMD] Device 14f3
+00:18.4 Host bridge: Advanced Micro Devices, Inc. [AMD] Device 14f4
+00:18.5 Host bridge: Advanced Micro Devices, Inc. [AMD] Device 14f5
+00:18.6 Host bridge: Advanced Micro Devices, Inc. [AMD] Device 14f6
+00:18.7 Host bridge: Advanced Micro Devices, Inc. [AMD] Device 14f7
+01:00.0 Non-Volatile memory controller: Samsung Electronics Co Ltd NVMe SSD Controller PM9B1 (DRAM-less) (rev 02)
+02:00.0 Ethernet controller: Realtek Semiconductor Co., Ltd. RTL8125 2.5GbE Controller (rev 05)
+03:00.0 Ethernet controller: Realtek Semiconductor Co., Ltd. RTL8125 2.5GbE Controller (rev 05)
+04:00.0 Network controller: MEDIATEK Corp. MT7922 802.11ax PCI Express Wireless Network Adapter
+65:00.0 VGA compatible controller: Advanced Micro Devices, Inc. [AMD/ATI] Phoenix1 (rev c2)
+65:00.1 Audio device: Advanced Micro Devices, Inc. [AMD/ATI] Rembrandt Radeon High Definition Audio Controller
+65:00.2 Encryption controller: Advanced Micro Devices, Inc. [AMD] Family 19h (Model 74h) CCP/PSP 3.0 Device
+65:00.3 USB controller: Advanced Micro Devices, Inc. [AMD] Device 15b9
+65:00.4 USB controller: Advanced Micro Devices, Inc. [AMD] Device 15ba
+65:00.6 Audio device: Advanced Micro Devices, Inc. [AMD] Family 17h/19h HD Audio Controller
+66:00.0 Non-Essential Instrumentation [1300]: Advanced Micro Devices, Inc. [AMD] Device 14ec
+67:00.0 Non-Essential Instrumentation [1300]: Advanced Micro Devices, Inc. [AMD] Device 14ec
+67:00.3 USB controller: Advanced Micro Devices, Inc. [AMD] Device 15c0
+67:00.4 USB controller: Advanced Micro Devices, Inc. [AMD] Device 15c1
+67:00.5 USB controller: Advanced Micro Devices, Inc. [AMD] Pink Sardine USB4/Thunderbolt NHI controller #1
+root@OpenWrt:~# lsusb
+Bus 007 Device 002: ID 090c:1000 General USB Flash Disk
+Bus 007 Device 001: ID 1d6b:0002 Linux 5.15.150 xhci-hcd xHCI Host Controller
+Bus 002 Device 001: ID 1d6b:0003 Linux 5.15.150 xhci-hcd xHCI Host Controller
+Bus 004 Device 001: ID 1d6b:0003 Linux 5.15.150 xhci-hcd xHCI Host Controller
+Bus 006 Device 001: ID 1d6b:0003 Linux 5.15.150 xhci-hcd xHCI Host Controller
+Bus 008 Device 001: ID 1d6b:0003 Linux 5.15.150 xhci-hcd xHCI Host Controller
+Bus 001 Device 002: ID 0e8d:c616 MediaTek Inc. Wireless_Device
+Bus 001 Device 001: ID 1d6b:0002 Linux 5.15.150 xhci-hcd xHCI Host Controller
+Bus 003 Device 001: ID 1d6b:0002 Linux 5.15.150 xhci-hcd xHCI Host Controller
+Bus 005 Device 001: ID 1d6b:0002 Linux 5.15.150 xhci-hcd xHCI Host Controller
+root@OpenWrt:~# ifconfig -a
+br-lan    Link encap:Ethernet  HWaddr 84:47:09:32:C7:79
+          inet addr:192.168.1.1  Bcast:192.168.1.255  Mask:255.255.255.0
+          inet6 addr: fe80::8647:9ff:fe32:c779/64 Scope:Link
+          inet6 addr: fd93:c6c5:5e86::1/60 Scope:Global
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:10311 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:12377 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000
+          RX bytes:1741032 (1.6 MiB)  TX bytes:7699116 (7.3 MiB)
+
+eth0      Link encap:Ethernet  HWaddr 84:47:09:32:C7:79
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:10432 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:12377 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000
+          RX bytes:1891920 (1.8 MiB)  TX bytes:7722182 (7.3 MiB)
+
+eth1      Link encap:Ethernet  HWaddr 84:47:09:32:C7:7A
+          inet addr:139.1.4.75  Bcast:139.1.5.255  Mask:255.255.254.0
+          inet6 addr: fe80::8647:9ff:fe32:c77a/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:23702 errors:0 dropped:3406 overruns:0 frame:0
+          TX packets:4245 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000
+          RX bytes:2333073 (2.2 MiB)  TX bytes:806599 (787.6 KiB)
+
+lo        Link encap:Local Loopback
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:1158 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:1158 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000
+          RX bytes:109891 (107.3 KiB)  TX bytes:109891 (107.3 KiB)
+Wifi config>/etc/config/wireless
+
+config wifi-device 'radio0'
+	option type 'mac80211'
+	option path 'pci0000:00/0000:00:02.2/0000:04:00.0'
+	option channel '36'
+	option band '5g'
+	option htmode 'HT20'
+	option cell_density '3'
+
+config wifi-iface 'default_radio0'
+	option device 'radio0'
+	option network 'lan'
+	option mode 'ap'
+	option ssid 'OpenWrt_1312'
+	option encryption 'none'
+
+root@OpenWrt:~#  logread
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.809201] pci 0000:04:00.0: [14                                                                   c3:0616] type 00 class 0x028000
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.810404] pci 0000:04:00.0: reg                                                                    0x10: [mem 0x7c10000000-0x7c100fffff 64bit pref]
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.811903] pci 0000:04:00.0: reg                                                                    0x18: [mem 0xdc900000-0xdc907fff 64bit]
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.813311] pci 0000:04:00.0: PME                                                                   # supported from D0 D3hot D3cold
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.814580] pci 0000:00:02.2: PCI                                                                    bridge to [bus 04]
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.815571] pci 0000:00:02.2:   b                                                                   ridge window [mem 0xdc900000-0xdc9fffff]
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.816907] pci 0000:00:02.2:   b                                                                   ridge window [mem 0x7c10000000-0x7c100fffff 64bit pref]
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.818541] pci 0000:00:03.1: PCI                                                                    bridge to [bus 05-64]
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.819579] pci 0000:00:03.1:   b                                                                   ridge window [io  0x9000-0xcfff]
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.820782] pci 0000:00:03.1:   b                                                                   ridge window [mem 0xc4000000-0xdbffffff]
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.822125] pci 0000:00:03.1:   b                                                                   ridge window [mem 0x6c00000000-0x7bffffffff 64bit pref]
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.823389] pci 0000:65:00.0: [10                                                                   02:15bf] type 00 class 0x030000
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.824594] pci 0000:65:00.0: reg                                                                    0x10: [mem 0x7c00000000-0x7c0fffffff 64bit pref]
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.826094] pci 0000:65:00.0: reg                                                                    0x18: [mem 0xdc000000-0xdc1fffff 64bit pref]
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.827522] pci 0000:65:00.0: reg                                                                    0x20: [io  0xd000-0xd0ff]
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.828629] pci 0000:65:00.0: reg                                                                    0x24: [mem 0xdc500000-0xdc57ffff]
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.829877] pci 0000:65:00.0: ena                                                                   bling Extended Tags
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.830897] pci 0000:65:00.0: PME                                                                   # supported from D1 D2 D3hot D3cold
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.832242] pci 0000:65:00.1: [10                                                                   02:1640] type 00 class 0x040300
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.833315] pci 0000:65:00.1: reg                                                                    0x10: [mem 0xdc588000-0xdc58bfff]
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.834581] pci 0000:65:00.1: ena                                                                   bling Extended Tags
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.835598] pci 0000:65:00.1: PME                                                                   # supported from D1 D2 D3hot D3cold
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.836938] pci 0000:65:00.2: [10                                                                   22:15c7] type 00 class 0x108000
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.838142] pci 0000:65:00.2: reg                                                                    0x18: [mem 0xdc400000-0xdc4fffff]
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.839392] pci 0000:65:00.2: reg                                                                    0x24: [mem 0xdc58c000-0xdc58dfff]
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.840640] pci 0000:65:00.2: ena                                                                   bling Extended Tags
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.841728] pci 0000:65:00.3: [10                                                                   22:15b9] type 00 class 0x0c0330
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.843320] pci 0000:65:00.3: reg                                                                    0x10: [mem 0xdc300000-0xdc3fffff 64bit]
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.844684] pci 0000:65:00.3: ena                                                                   bling Extended Tags
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.845702] pci 0000:65:00.3: PME                                                                   # supported from D0 D3hot D3cold
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.846990] pci 0000:65:00.4: [10                                                                   22:15ba] type 00 class 0x0c0330
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.848193] pci 0000:65:00.4: reg                                                                    0x10: [mem 0xdc200000-0xdc2fffff 64bit]
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.849559] pci 0000:65:00.4: ena                                                                   bling Extended Tags
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.850578] pci 0000:65:00.4: PME                                                                   # supported from D0 D3hot D3cold
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.851865] pci 0000:65:00.6: [10                                                                   22:15e3] type 00 class 0x040300
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.853064] pci 0000:65:00.6: reg                                                                    0x10: [mem 0xdc580000-0xdc587fff]
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.853332] pci 0000:65:00.6: ena                                                                   bling Extended Tags
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.854355] pci 0000:65:00.6: PME                                                                   # supported from D0 D3hot D3cold
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.855635] pci 0000:00:08.1: PCI                                                                    bridge to [bus 65]
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.856622] pci 0000:00:08.1:   b                                                                   ridge window [io  0xd000-0xdfff]
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.857830] pci 0000:00:08.1:   b                                                                   ridge window [mem 0xdc000000-0xdc5fffff]
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.859169] pci 0000:00:08.1:   b                                                                   ridge window [mem 0x7c00000000-0x7c0fffffff 64bit pref]
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.860790] pci 0000:66:00.0: [10                                                                   22:14ec] type 00 class 0x130000
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.862008] pci 0000:66:00.0: ena                                                                   bling Extended Tags
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.863338] pci 0000:66:00.0: PME                                                                   # supported from D3hot D3cold
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.864538] pci 0000:00:08.2: PCI                                                                    bridge to [bus 66]
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.865603] pci 0000:67:00.0: [10                                                                   22:14ec] type 00 class 0x130000
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.866823] pci 0000:67:00.0: ena                                                                   bling Extended Tags
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.867918] pci 0000:67:00.3: [10                                                                   22:15c0] type 00 class 0x0c0330
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.869118] pci 0000:67:00.3: reg                                                                    0x10: [mem 0xdc700000-0xdc7fffff 64bit]
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.870488] pci 0000:67:00.3: ena                                                                   bling Extended Tags
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.871507] pci 0000:67:00.3: PME                                                                   # supported from D0 D3hot D3cold
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.873389] pci 0000:67:00.4: [10                                                                   22:15c1] type 00 class 0x0c0330
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.874594] pci 0000:67:00.4: reg                                                                    0x10: [mem 0xdc600000-0xdc6fffff 64bit]
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.875959] pci 0000:67:00.4: ena                                                                   bling Extended Tags
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.876978] pci 0000:67:00.4: PME                                                                   # supported from D0 D3hot D3cold
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.878261] pci 0000:67:00.5: [10                                                                   22:1668] type 00 class 0x0c0340
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.879467] pci 0000:67:00.5: reg                                                                    0x10: [mem 0xdc800000-0xdc87ffff 64bit]
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.880837] pci 0000:67:00.5: ena                                                                   bling Extended Tags
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.881856] pci 0000:67:00.5: PME                                                                   # supported from D0 D3hot D3cold
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.883363] pci 0000:00:08.3: PCI                                                                    bridge to [bus 67]
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.884354] pci 0000:00:08.3:   b                                                                   ridge window [mem 0xdc600000-0xdc8fffff]
+Sun May 12 03:41:59 2024 kern.debug kernel: [    0.885735] pci_bus 0000:00: on                                                                    NUMA node 0
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.889424] ACPI: PCI: Interrupt                                                                    link LNKA configured for IRQ 0
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.890627] ACPI: PCI: Interrupt                                                                    link LNKB configured for IRQ 0
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.891829] ACPI: PCI: Interrupt                                                                    link LNKC configured for IRQ 0
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.893038] ACPI: PCI: Interrupt                                                                    link LNKD configured for IRQ 0
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.893338] ACPI: PCI: Interrupt                                                                    link LNKE configured for IRQ 0
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.894534] ACPI: PCI: Interrupt                                                                    link LNKF configured for IRQ 0
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.895733] ACPI: PCI: Interrupt                                                                    link LNKG configured for IRQ 0
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.896928] ACPI: PCI: Interrupt                                                                    link LNKH configured for IRQ 0
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.900428] ACPI: EC: interrupt u                                                                   nblocked
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.901228] ACPI: EC: event unblo                                                                   cked
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.901968] ACPI: EC: EC_CMD/EC_S                                                                   C=0x66, EC_DATA=0x62
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.903303] ACPI: EC: GPE=0xb
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.903904] ACPI: \_SB_.PCI0.SBRG                                                                   .EC0_: Boot DSDT EC initialization complete
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.905288] ACPI: \_SB_.PCI0.SBRG                                                                   .EC0_: EC: Used to handle transactions and events
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.906793] iommu: Default domain                                                                    type: Translated
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.907763] iommu: DMA domain TLB                                                                    invalidation policy: lazy mode
+Sun May 12 03:41:59 2024 kern.notice kernel: [    0.909016] SCSI subsystem init                                                                   ialized
+Sun May 12 03:41:59 2024 kern.debug kernel: [    0.909820] libata version 3.00                                                                    loaded.
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.909832] ACPI: bus type USB re                                                                   gistered
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.910645] usbcore: registered n                                                                   ew interface driver usbfs
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.911738] usbcore: registered n                                                                   ew interface driver hub
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.913310] usbcore: registered n                                                                   ew device driver usb
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.914320] pps_core: LinuxPPS AP                                                                   I ver. 1 registered
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.915305] pps_core: Software ve                                                                   r. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.917098] PTP clock support reg                                                                   istered
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.917911] Registered efivars op                                                                   erations
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.918841] PCI: Using ACPI for I                                                                   RQ routing
+Sun May 12 03:41:59 2024 kern.debug kernel: [    0.919686] PCI: pci_cache_line_                                                                   size set to 64 bytes
+Sun May 12 03:41:59 2024 kern.warn kernel: [    0.919745] Expanded resource Res                                                                   erved due to conflict with PCI Bus 0000:00
+Sun May 12 03:41:59 2024 kern.debug kernel: [    0.921111] e820: reserve RAM bu                                                                   ffer [mem 0x09a7f000-0x0bffffff]
+Sun May 12 03:41:59 2024 kern.debug kernel: [    0.921112] e820: reserve RAM bu                                                                   ffer [mem 0x0a200000-0x0bffffff]
+Sun May 12 03:41:59 2024 kern.debug kernel: [    0.921113] e820: reserve RAM bu                                                                   ffer [mem 0x90384000-0x93ffffff]
+Sun May 12 03:41:59 2024 kern.debug kernel: [    0.921114] e820: reserve RAM bu                                                                   ffer [mem 0x93dc0000-0x93ffffff]
+Sun May 12 03:41:59 2024 kern.debug kernel: [    0.921114] e820: reserve RAM bu                                                                   ffer [mem 0x9bff9000-0x9bffffff]
+Sun May 12 03:41:59 2024 kern.debug kernel: [    0.921115] e820: reserve RAM bu                                                                   ffer [mem 0x9bfff000-0x9bffffff]
+Sun May 12 03:41:59 2024 kern.debug kernel: [    0.921116] e820: reserve RAM bu                                                                   ffer [mem 0x79e300000-0x79fffffff]
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.921222] hpet0: at MMIO 0xfed0                                                                   0000, IRQs 2, 8, 0
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.922193] hpet0: 3 comparators,                                                                    32-bit 14.318180 MHz counter
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.925371] clocksource: Switched                                                                    to clocksource tsc-early
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.925371] pnp: PnP ACPI init
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.925866] system 00:00: [mem 0x                                                                   e0000000-0xefffffff] has been reserved
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.929053] system 00:02: [io  0x                                                                   04d0-0x04d1] has been reserved
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.930231] system 00:02: [io  0x                                                                   040b] has been reserved
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.931282] system 00:02: [io  0x                                                                   04d6] has been reserved
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.932335] system 00:02: [io  0x                                                                   0c00-0x0c01] has been reserved
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.932777] system 00:02: [io  0x                                                                   0c14] has been reserved
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.933827] system 00:02: [io  0x                                                                   0c50-0x0c51] has been reserved
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.934996] system 00:02: [io  0x                                                                   0c52] has been reserved
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.936046] system 00:02: [io  0x                                                                   0c6c] has been reserved
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.937095] system 00:02: [io  0x                                                                   0c6f] has been reserved
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.938146] system 00:02: [io  0x                                                                   0cd0-0x0cd1] has been reserved
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.939313] system 00:02: [io  0x                                                                   0cd2-0x0cd3] has been reserved
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.940481] system 00:02: [io  0x                                                                   0cd4-0x0cd5] has been reserved
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.941648] system 00:02: [io  0x                                                                   0cd6-0x0cd7] has been reserved
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.942815] system 00:02: [io  0x                                                                   0cd8-0x0cdf] has been reserved
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.943983] system 00:02: [io  0x                                                                   0800-0x089f] has been reserved
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.945150] system 00:02: [io  0x                                                                   0b00-0x0b0f] has been reserved
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.946316] system 00:02: [io  0x                                                                   0b20-0x0b3f] has been reserved
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.947483] system 00:02: [io  0x                                                                   0900-0x090f] has been reserved
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.948650] system 00:02: [io  0x                                                                   0910-0x091f] has been reserved
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.949816] system 00:02: [mem 0x                                                                   fec00000-0xfec00fff] could not be reserved
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.951183] system 00:02: [mem 0x                                                                   fec01000-0xfec01fff] could not be reserved
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.952552] system 00:02: [mem 0x                                                                   fedc0000-0xfedc0fff] has been reserved
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.953853] system 00:02: [mem 0x                                                                   fee00000-0xfee00fff] has been reserved
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.955152] system 00:02: [mem 0x                                                                   fed80000-0xfed8ffff] could not be reserved
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.956518] system 00:02: [mem 0x                                                                   fec10000-0xfec10fff] has been reserved
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.957818] system 00:02: [mem 0x                                                                   ff000000-0xffffffff] has been reserved
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.959597] pnp: PnP ACPI: found                                                                    4 devices
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.965488] clocksource: acpi_pm:                                                                    mask: 0xffffff max_cycles: 0xffffff, max_idle_ns: 2085701024 ns
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.967263] NET: Registered PF_IN                                                                   ET protocol family
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.968300] IP idents hash table                                                                    entries: 262144 (order: 9, 2097152 bytes, linear)
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.970358] tcp_listen_portaddr_h                                                                   ash hash table entries: 16384 (order: 6, 262144 bytes, linear)
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.972079] Table-perturb hash ta                                                                   ble entries: 65536 (order: 6, 262144 bytes, linear)
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.973605] TCP established hash                                                                    table entries: 262144 (order: 9, 2097152 bytes, linear)
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.975276] TCP bind hash table e                                                                   ntries: 65536 (order: 8, 1048576 bytes, linear)
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.976772] TCP: Hash tables conf                                                                   igured (established 262144 bind 65536)
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.978093] UDP hash table entrie                                                                   s: 16384 (order: 7, 524288 bytes, linear)
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.979468] UDP-Lite hash table e                                                                   ntries: 16384 (order: 7, 524288 bytes, linear)
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.980949] NET: Registered PF_UN                                                                   IX/PF_LOCAL protocol family
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.982078] pci 0000:00:01.2: PCI                                                                    bridge to [bus 01]
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.983070] pci 0000:00:01.2:   b                                                                   ridge window [mem 0xdcc00000-0xdccfffff]
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.984408] pci 0000:00:01.3: PCI                                                                    bridge to [bus 02]
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.985392] pci 0000:00:01.3:   b                                                                   ridge window [io  0xf000-0xffff]
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.986594] pci 0000:00:01.3:   b                                                                   ridge window [mem 0xdcb00000-0xdcbfffff]
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.987937] pci 0000:00:02.1: PCI                                                                    bridge to [bus 03]
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.988920] pci 0000:00:02.1:   b                                                                   ridge window [io  0xe000-0xefff]
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.990122] pci 0000:00:02.1:   b                                                                   ridge window [mem 0xdca00000-0xdcafffff]
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.991462] pci 0000:00:02.2: PCI                                                                    bridge to [bus 04]
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.992448] pci 0000:00:02.2:   b                                                                   ridge window [mem 0xdc900000-0xdc9fffff]
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.993782] pci 0000:00:02.2:   b                                                                   ridge window [mem 0x7c10000000-0x7c100fffff 64bit pref]
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.995373] pci 0000:00:03.1: PCI                                                                    bridge to [bus 05-64]
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.996413] pci 0000:00:03.1:   b                                                                   ridge window [io  0x9000-0xcfff]
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.997622] pci 0000:00:03.1:   b                                                                   ridge window [mem 0xc4000000-0xdbffffff]
+Sun May 12 03:41:59 2024 kern.info kernel: [    0.998960] pci 0000:00:03.1:   b                                                                   ridge window [mem 0x6c00000000-0x7bffffffff 64bit pref]
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.000545] pci 0000:00:08.1: PCI                                                                    bridge to [bus 65]
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.001531] pci 0000:00:08.1:   b                                                                   ridge window [io  0xd000-0xdfff]
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.002734] pci 0000:00:08.1:   b                                                                   ridge window [mem 0xdc000000-0xdc5fffff]
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.004079] pci 0000:00:08.1:   b                                                                   ridge window [mem 0x7c00000000-0x7c0fffffff 64bit pref]
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.005672] pci 0000:00:08.2: PCI                                                                    bridge to [bus 66]
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.006667] pci 0000:00:08.3: PCI                                                                    bridge to [bus 67]
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.007656] pci 0000:00:08.3:   b                                                                   ridge window [mem 0xdc600000-0xdc8fffff]
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.008999] pci_bus 0000:00: reso                                                                   urce 4 [io  0x0000-0x03af window]
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.010215] pci_bus 0000:00: reso                                                                   urce 5 [io  0x03e0-0x0cf7 window]
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.011431] pci_bus 0000:00: reso                                                                   urce 6 [io  0x03b0-0x03df window]
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.012648] pci_bus 0000:00: reso                                                                   urce 7 [io  0x0d00-0xffff window]
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.013864] pci_bus 0000:00: reso                                                                   urce 8 [mem 0x000a0000-0x000bffff window]
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.015213] pci_bus 0000:00: reso                                                                   urce 9 [mem 0x000c0000-0x000dffff window]
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.016562] pci_bus 0000:00: reso                                                                   urce 10 [mem 0xfa000000-0xfcffffff window]
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.017928] pci_bus 0000:00: reso                                                                   urce 11 [mem 0xf0000000-0xf9ffffff window]
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.019294] pci_bus 0000:00: reso                                                                   urce 12 [mem 0xa0000000-0xdfffffff window]
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.020659] pci_bus 0000:00: reso                                                                   urce 13 [mem 0x860000000-0x7fffffffff window]
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.022075] pci_bus 0000:01: reso                                                                   urce 1 [mem 0xdcc00000-0xdccfffff]
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.023307] pci_bus 0000:02: reso                                                                   urce 0 [io  0xf000-0xffff]
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.024408] pci_bus 0000:02: reso                                                                   urce 1 [mem 0xdcb00000-0xdcbfffff]
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.025641] pci_bus 0000:03: reso                                                                   urce 0 [io  0xe000-0xefff]
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.026739] pci_bus 0000:03: reso                                                                   urce 1 [mem 0xdca00000-0xdcafffff]
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.027973] pci_bus 0000:04: reso                                                                   urce 1 [mem 0xdc900000-0xdc9fffff]
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.029205] pci_bus 0000:04: reso                                                                   urce 2 [mem 0x7c10000000-0x7c100fffff 64bit pref]
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.030689] pci_bus 0000:05: reso                                                                   urce 0 [io  0x9000-0xcfff]
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.031790] pci_bus 0000:05: reso                                                                   urce 1 [mem 0xc4000000-0xdbffffff]
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.033025] pci_bus 0000:05: reso                                                                   urce 2 [mem 0x6c00000000-0x7bffffffff 64bit pref]
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.034508] pci_bus 0000:65: reso                                                                   urce 0 [io  0xd000-0xdfff]
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.035608] pci_bus 0000:65: reso                                                                   urce 1 [mem 0xdc000000-0xdc5fffff]
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.036841] pci_bus 0000:65: reso                                                                   urce 2 [mem 0x7c00000000-0x7c0fffffff 64bit pref]
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.038324] pci_bus 0000:67: reso                                                                   urce 1 [mem 0xdc600000-0xdc8fffff]
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.039645] pci 0000:65:00.1: D0                                                                    power state depends on 0000:65:00.0
+Sun May 12 03:41:59 2024 kern.warn kernel: [    1.040924] pci 0000:00:08.1: can                                                                   't derive routing for PCI INT A
+Sun May 12 03:41:59 2024 kern.warn kernel: [    1.042112] pci 0000:00:08.1: PCI                                                                    INT A: not connected
+Sun May 12 03:41:59 2024 kern.warn kernel: [    1.043336] pci 0000:00:08.3: can                                                                   't derive routing for PCI INT A
+Sun May 12 03:41:59 2024 kern.warn kernel: [    1.044520] pci 0000:00:08.3: PCI                                                                    INT A: not connected
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.045678] PCI: CLS 64 bytes, de                                                                   fault 64
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.046488] pci 0000:00:00.2: AMD                                                                   -Vi: IOMMU performance counters supported
+Sun May 12 03:41:59 2024 kern.warn kernel: [    1.047859] pci 0000:00:00.2: can                                                                   't derive routing for PCI INT A
+Sun May 12 03:41:59 2024 kern.warn kernel: [    1.049042] pci 0000:00:00.2: PCI                                                                    INT A: not connected
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.050082] pci 0000:00:01.0: Add                                                                   ing to iommu group 0
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.051090] pci 0000:00:01.2: Add                                                                   ing to iommu group 0
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.052103] pci 0000:00:01.3: Add                                                                   ing to iommu group 0
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.053128] pci 0000:00:02.0: Add                                                                   ing to iommu group 1
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.054136] pci 0000:00:02.1: Add                                                                   ing to iommu group 1
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.055144] pci 0000:00:02.2: Add                                                                   ing to iommu group 1
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.056160] pci 0000:00:03.0: Add                                                                   ing to iommu group 2
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.057172] pci 0000:00:03.1: Add                                                                   ing to iommu group 2
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.058187] pci 0000:00:04.0: Add                                                                   ing to iommu group 3
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.059215] pci 0000:00:08.0: Add                                                                   ing to iommu group 4
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.060222] pci 0000:00:08.1: Add                                                                   ing to iommu group 4
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.061236] pci 0000:00:08.2: Add                                                                   ing to iommu group 4
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.062245] pci 0000:00:08.3: Add                                                                   ing to iommu group 4
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.063262] pci 0000:00:14.0: Add                                                                   ing to iommu group 5
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.064274] pci 0000:00:14.3: Add                                                                   ing to iommu group 5
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.065318] pci 0000:00:18.0: Add                                                                   ing to iommu group 6
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.066333] pci 0000:00:18.1: Add                                                                   ing to iommu group 6
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.067346] pci 0000:00:18.2: Add                                                                   ing to iommu group 6
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.068354] pci 0000:00:18.3: Add                                                                   ing to iommu group 6
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.069366] pci 0000:00:18.4: Add                                                                   ing to iommu group 6
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.070376] pci 0000:00:18.5: Add                                                                   ing to iommu group 6
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.071389] pci 0000:00:18.6: Add                                                                   ing to iommu group 6
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.072398] pci 0000:00:18.7: Add                                                                   ing to iommu group 6
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.073407] pci 0000:01:00.0: Add                                                                   ing to iommu group 0
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.074411] pci 0000:02:00.0: Add                                                                   ing to iommu group 0
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.075413] pci 0000:03:00.0: Add                                                                   ing to iommu group 1
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.076415] pci 0000:04:00.0: Add                                                                   ing to iommu group 1
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.077418] pci 0000:65:00.0: Add                                                                   ing to iommu group 4
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.078423] pci 0000:65:00.1: Add                                                                   ing to iommu group 4
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.079430] pci 0000:65:00.2: Add                                                                   ing to iommu group 4
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.080432] pci 0000:65:00.3: Add                                                                   ing to iommu group 4
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.081438] pci 0000:65:00.4: Add                                                                   ing to iommu group 4
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.082441] pci 0000:65:00.6: Add                                                                   ing to iommu group 4
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.083445] pci 0000:66:00.0: Add                                                                   ing to iommu group 4
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.084452] pci 0000:67:00.0: Add                                                                   ing to iommu group 4
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.085453] pci 0000:67:00.3: Add                                                                   ing to iommu group 4
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.086457] pci 0000:67:00.4: Add                                                                   ing to iommu group 4
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.087461] pci 0000:67:00.5: Add                                                                   ing to iommu group 4
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.089944] pci 0000:00:00.2: AMD                                                                   -Vi: Found IOMMU cap 0x40
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.091028] AMD-Vi: Extended feat                                                                   ures (0x246577efa2054ada): PPR NX GT IA GA PC
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.092451] AMD-Vi: Interrupt rem                                                                   apping enabled
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.093517] PCI-DMA: Using softwa                                                                   re bounce buffering for IO (SWIOTLB)
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.094812] software IO TLB: mapp                                                                   ed [mem 0x000000008a9d7000-0x000000008e9d7000] (64MB)
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.096807] RAPL PMU: API unit is                                                                    2^-32 Joules, 1 fixed counters, 163840 ms ovfl timer
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.098372] RAPL PMU: hw unit of                                                                    domain package 2^-16 Joules
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.099495] LVT offset 0 assigned                                                                    for vector 0x400
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.100851] perf: AMD IBS detecte                                                                   d (0x00000bff)
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.101764] perf/amd_iommu: Detec                                                                   ted AMD IOMMU #0 (2 banks, 4 counters/bank).
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.105309] workingset: timestamp                                                                   _bits=46 max_order=23 bucket_order=0
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.107336] squashfs: version 4.0                                                                    (2009/01/31) Phillip Lougher
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.108596] Block layer SCSI gene                                                                   ric (bsg) driver version 0.4 loaded (major 247)
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.110496] pcieport 0000:00:01.2                                                                   : PME: Signaling with IRQ 25
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.111788] pcieport 0000:00:01.3                                                                   : PME: Signaling with IRQ 26
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.113072] pcieport 0000:00:02.1                                                                   : PME: Signaling with IRQ 27
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.114357] pcieport 0000:00:02.2                                                                   : PME: Signaling with IRQ 28
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.115656] pcieport 0000:00:03.1                                                                   : PME: Signaling with IRQ 29
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.116958] pcieport 0000:00:08.1                                                                   : PME: Signaling with IRQ 30
+Sun May 12 03:41:59 2024 kern.warn kernel: [    1.118152] pcieport 0000:00:08.2                                                                   : can't derive routing for PCI INT A
+Sun May 12 03:41:59 2024 kern.warn kernel: [    1.119426] pcieport 0000:00:08.2                                                                   : PCI INT A: not connected
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.120654] pcieport 0000:00:08.2                                                                   : PME: Signaling with IRQ 31
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.121940] pcieport 0000:00:08.3                                                                   : PME: Signaling with IRQ 32
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.123134] hv_vmbus: registering                                                                    driver hyperv_fb
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.124162] input: Power Button a                                                                   s /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0C0C:00/input/input0
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.125823] ACPI: button: Power B                                                                   utton [PWRB]
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.126756] ACPI: video: Video De                                                                   vice [VGA] (multi-head: yes  rom: no  post: no)
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.128316] input: Video Bus as /                                                                   devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A08:00/device:22/LNXVIDEO:00/input/input1
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.130344] smpboot: Estimated ra                                                                   tio of average max frequency by base frequency (times 1024): 1412
+Sun May 12 03:41:59 2024 kern.debug kernel: [    1.132147] Monitor-Mwait will b                                                                   e used to enter C-1 state
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.132156] ACPI: \_SB_.PLTF.C000                                                                   : Found 3 idle states
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.133402] ACPI: \_SB_.PLTF.C002                                                                   : Found 3 idle states
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.134550] ACPI: \_SB_.PLTF.C004                                                                   : Found 3 idle states
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.135714] ACPI: \_SB_.PLTF.C006                                                                   : Found 3 idle states
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.136968] ACPI: \_SB_.PLTF.C008                                                                   : Found 3 idle states
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.138138] ACPI: \_SB_.PLTF.C00A                                                                   : Found 3 idle states
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.139365] ACPI: \_SB_.PLTF.C00C                                                                   : Found 3 idle states
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.140556] ACPI: \_SB_.PLTF.C00E                                                                   : Found 3 idle states
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.141708] ACPI: \_SB_.PLTF.C001                                                                   : Found 3 idle states
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.142865] ACPI: \_SB_.PLTF.C003                                                                   : Found 3 idle states
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.143988] ACPI: \_SB_.PLTF.C005                                                                   : Found 3 idle states
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.145164] ACPI: \_SB_.PLTF.C007                                                                   : Found 3 idle states
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.146271] ACPI: \_SB_.PLTF.C009                                                                   : Found 3 idle states
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.147408] ACPI: \_SB_.PLTF.C00B                                                                   : Found 3 idle states
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.148534] ACPI: \_SB_.PLTF.C00D                                                                   : Found 3 idle states
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.149673] ACPI: \_SB_.PLTF.C00F                                                                   : Found 3 idle states
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.150899] thermal LNXTHERM:00:                                                                    registered as thermal_zone0
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.152024] ACPI: thermal: Therma                                                                   l Zone [TZ01] (20 C)
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.153081] Serial: 8250/16550 dr                                                                   iver, 16 ports, IRQ sharing enabled
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.154748] Non-volatile memory d                                                                   river v1.3
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.155643] Linux agpgart interfa                                                                   ce v0.103
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.156491] AMD-Vi: AMD IOMMUv2 l                                                                   oaded and initialized
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.159069] loop: module loaded
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.159720] Guest personality ini                                                                   tialized and is inactive
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.160796] VMCI host device regi                                                                   stered (name=vmci, major=10, minor=127)
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.162117] Initialized host pers                                                                   onality
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.162929] Loading iSCSI transpo                                                                   rt class v2.0-870.
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.164035] VMware PVSCSI driver                                                                    - version 1.0.7.0-k
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.165040] hv_vmbus: registering                                                                    driver hv_storvsc
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.166116] nvme 0000:01:00.0: pl                                                                   atform quirk: setting simple suspend
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.167408] nvme nvme0: pci funct                                                                   ion 0000:01:00.0
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.168497] VMware vmxnet3 virtua                                                                   l NIC driver - version 1.6.0.0-k-NAPI
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.169856] hv_vmbus: registering                                                                    driver hv_netvsc
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.170811] Fusion MPT base drive                                                                   r 3.04.20
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.171631] Copyright (c) 1999-20                                                                   08 LSI Corporation
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.172602] Fusion MPT SPI Host d                                                                   river 3.04.20
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.173495] Fusion MPT SAS Host d                                                                   river 3.04.20
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.174395] ehci_hcd: USB 2.0 'En                                                                   hanced' Host Controller (EHCI) Driver
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.175685] ehci-pci: EHCI PCI pl                                                                   atform driver
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.176581] ohci_hcd: USB 1.1 'Op                                                                   en' Host Controller (OHCI) Driver
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.177806] ohci-pci: OHCI PCI pl                                                                   atform driver
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.178701] ohci-platform: OHCI g                                                                   eneric platform driver
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.179746] uhci_hcd: USB Univers                                                                   al Host Controller Interface driver
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.181060] xhci_hcd 0000:65:00.3                                                                   : xHCI Host Controller
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.182100] xhci_hcd 0000:65:00.3                                                                   : new USB bus registered, assigned bus number 1
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.183996] xhci_hcd 0000:65:00.3                                                                   : hcc params 0x0128ffc5 hci version 0x120 quirks 0x0000000200000410
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.186003] xhci_hcd 0000:65:00.3                                                                   : xHCI Host Controller
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.187044] xhci_hcd 0000:65:00.3                                                                   : new USB bus registered, assigned bus number 2
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.187410] nvme nvme0: Shutdown                                                                    timeout set to 8 seconds
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.188509] xhci_hcd 0000:65:00.3                                                                   : Host supports USB 3.1 Enhanced SuperSpeed
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.191261] hub 1-0:1.0: USB hub                                                                    found
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.192056] hub 1-0:1.0: 5 ports                                                                    detected
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.192622] nvme nvme0: allocated                                                                    64 MiB host memory buffer.
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.194075] usb usb2: We don't kn                                                                   ow the algorithms for LPM for this host, disabling LPM.
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.195754] hub 2-0:1.0: USB hub                                                                    found
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.196525] hub 2-0:1.0: 2 ports                                                                    detected
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.197861] xhci_hcd 0000:65:00.4                                                                   : xHCI Host Controller
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.198938] xhci_hcd 0000:65:00.4                                                                   : new USB bus registered, assigned bus number 3
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.199669] nvme nvme0: 16/0/0 de                                                                   fault/read/poll queues
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.201157] xhci_hcd 0000:65:00.4                                                                   : hcc params 0x0110ffc5 hci version 0x120 quirks 0x0000000200000410
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.203471] xhci_hcd 0000:65:00.4                                                                   : xHCI Host Controller
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.204512] xhci_hcd 0000:65:00.4                                                                   : new USB bus registered, assigned bus number 4
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.205968] xhci_hcd 0000:65:00.4                                                                   : Host supports USB 3.1 Enhanced SuperSpeed
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.207649] hub 3-0:1.0: USB hub                                                                    found
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.208428] hub 3-0:1.0: 1 port d                                                                   etected
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.208532]  nvme0n1: p1 p2 p3
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.209339] usb usb4: We don't kn                                                                   ow the algorithms for LPM for this host, disabling LPM.
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.211524] hub 4-0:1.0: USB hub                                                                    found
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.212289] hub 4-0:1.0: 1 port d                                                                   etected
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.213236] xhci_hcd 0000:67:00.3                                                                   : xHCI Host Controller
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.214274] xhci_hcd 0000:67:00.3                                                                   : new USB bus registered, assigned bus number 5
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.216094] xhci_hcd 0000:67:00.3                                                                   : hcc params 0x0110ffc5 hci version 0x120 quirks 0x0000000200000410
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.218201] xhci_hcd 0000:67:00.3                                                                   : xHCI Host Controller
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.219238] xhci_hcd 0000:67:00.3                                                                   : new USB bus registered, assigned bus number 6
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.220691] xhci_hcd 0000:67:00.3                                                                   : Host supports USB 3.1 Enhanced SuperSpeed
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.222331] hub 5-0:1.0: USB hub                                                                    found
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.223124] hub 5-0:1.0: 1 port d                                                                   etected
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.224270] usb usb6: We don't kn                                                                   ow the algorithms for LPM for this host, disabling LPM.
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.225950] hub 6-0:1.0: USB hub                                                                    found
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.226718] hub 6-0:1.0: 1 port d                                                                   etected
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.228086] xhci_hcd 0000:67:00.4                                                                   : xHCI Host Controller
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.229126] xhci_hcd 0000:67:00.4                                                                   : new USB bus registered, assigned bus number 7
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.230918] xhci_hcd 0000:67:00.4                                                                   : hcc params 0x0110ffc5 hci version 0x120 quirks 0x0000000200000410
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.233031] xhci_hcd 0000:67:00.4                                                                   : xHCI Host Controller
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.234076] xhci_hcd 0000:67:00.4                                                                   : new USB bus registered, assigned bus number 8
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.235531] xhci_hcd 0000:67:00.4                                                                   : Host supports USB 3.1 Enhanced SuperSpeed
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.237179] hub 7-0:1.0: USB hub                                                                    found
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.237980] hub 7-0:1.0: 1 port d                                                                   etected
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.238942] usb usb8: We don't kn                                                                   ow the algorithms for LPM for this host, disabling LPM.
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.240621] hub 8-0:1.0: USB hub                                                                    found
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.241386] hub 8-0:1.0: 1 port d                                                                   etected
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.242632] usbcore: registered n                                                                   ew interface driver usb-storage
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.243856] i8042: PNP: PS/2 Cont                                                                   roller [PNP0303:PS2K] at 0x60,0x64 irq 1
+Sun May 12 03:41:59 2024 kern.warn kernel: [    1.245196] i8042: PNP: PS/2 appe                                                                   ars to have AUX port disabled, if this is incorrect please boot with i8042.nopn                                                                   p
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.248014] serio: i8042 KBD port                                                                    at 0x60,0x64 irq 1
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.249003] hv_vmbus: registering                                                                    driver hyperv_keyboard
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.250066] rtc_cmos 00:01: RTC c                                                                   an wake from S4
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.251226] rtc_cmos 00:01: regis                                                                   tered as rtc0
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.252152] rtc_cmos 00:01: setti                                                                   ng system clock to 2024-05-12T03:41:54 UTC (1715485314)
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.253755] rtc_cmos 00:01: alarm                                                                   s up to one month, y3k, 114 bytes nvram, hpet irqs
+Sun May 12 03:41:59 2024 kern.err kernel: [    1.255263] fail to initialize ptp                                                                   _kvm
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.255307] sdhci: Secure Digital                                                                    Host Controller Interface driver
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.257286] sdhci: Copyright(c) P                                                                   ierre Ossman
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.258338] hid: raw HID events d                                                                   river (C) Jiri Kosina
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.259378] hv_vmbus: registering                                                                    driver hid_hyperv
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.260357] usbcore: registered n                                                                   ew interface driver usbhid
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.261462] usbhid: USB HID core                                                                    driver
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.262235] hv_utils: Registering                                                                    HyperV Utility Driver
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.263270] hv_vmbus: registering                                                                    driver hv_utils
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.264206] hv_vmbus: registering                                                                    driver hv_balloon
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.265268] NET: Registered PF_IN                                                                   ET6 protocol family
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.266557] Segment Routing with                                                                    IPv6
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.267299] In-situ OAM (IOAM) wi                                                                   th IPv6
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.268093] NET: Registered PF_PA                                                                   CKET protocol family
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.269105] bridge: filtering via                                                                    arp/ip/ip6tables is no longer available by default. Update your scripts to loa                                                                   d br_netfilter if you need this.
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.271733] 8021q: 802.1Q VLAN Su                                                                   pport v1.8
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.272605] NET: Registered PF_VS                                                                   OCK protocol family
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.275313] microcode: CPU0: patc                                                                   h_level=0x0a704104
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.276327] microcode: CPU1: patc                                                                   h_level=0x0a704104
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.277318] microcode: CPU2: patc                                                                   h_level=0x0a704104
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.278325] microcode: CPU3: patc                                                                   h_level=0x0a704104
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.279332] microcode: CPU4: patc                                                                   h_level=0x0a704104
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.280336] microcode: CPU5: patc                                                                   h_level=0x0a704104
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.281346] microcode: CPU6: patc                                                                   h_level=0x0a704104
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.282355] microcode: CPU7: patc                                                                   h_level=0x0a704104
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.283340] microcode: CPU8: patc                                                                   h_level=0x0a704104
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.284335] microcode: CPU9: patc                                                                   h_level=0x0a704104
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.285349] microcode: CPU10: pat                                                                   ch_level=0x0a704104
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.286372] microcode: CPU11: pat                                                                   ch_level=0x0a704104
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.287395] microcode: CPU12: pat                                                                   ch_level=0x0a704104
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.288420] microcode: CPU13: pat                                                                   ch_level=0x0a704104
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.289446] microcode: CPU14: pat                                                                   ch_level=0x0a704104
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.290465] microcode: CPU15: pat                                                                   ch_level=0x0a704104
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.291462] microcode: Microcode                                                                    Update Driver: v2.2.
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.291465] IPI shorthand broadca                                                                   st: enabled
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.293336] AVX2 version of gcm_e                                                                   nc/dec engaged.
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.294369] AES CTR mode by8 opti                                                                   mization enabled
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.296141] sched_clock: Marking                                                                    stable (1040888902, 255241832)->(1297474560, -1343826)
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.475747] usb 1-5: new high-spe                                                                   ed USB device number 2 using xhci_hcd
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.515799] usb 7-1: new high-spe                                                                   ed USB device number 2 using xhci_hcd
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.702851] usb-storage 7-1:1.0:                                                                    USB Mass Storage device detected
+Sun May 12 03:41:59 2024 kern.info kernel: [    1.704653] scsi host0: usb-stora                                                                   ge 7-1:1.0
+Sun May 12 03:41:59 2024 kern.info kernel: [    2.097255] Waiting for root devi                                                                   ce PARTUUID=7117db1b-5559-e8fa-6528-e16757565d02...
+Sun May 12 03:41:59 2024 kern.info kernel: [    2.145773] tsc: Refined TSC cloc                                                                   ksource calibration: 3792.831 MHz
+Sun May 12 03:41:59 2024 kern.info kernel: [    2.147054] clocksource: tsc: mas                                                                   k: 0xffffffffffffffff max_cycles: 0x6d57c6ec341, max_idle_ns: 881590493019 ns
+Sun May 12 03:41:59 2024 kern.info kernel: [    2.149156] clocksource: Switched                                                                    to clocksource tsc
+Sun May 12 03:41:59 2024 kern.notice kernel: [    2.952924] scsi 0:0:0:0: Direc                                                                   t-Access     General  USB Flash Disk   1100 PQ: 0 ANSI: 4
+Sun May 12 03:41:59 2024 kern.notice kernel: [    2.956778] sd 0:0:0:0: [sda] 1                                                                   5669248 512-byte logical blocks: (8.02 GB/7.47 GiB)
+Sun May 12 03:41:59 2024 kern.notice kernel: [    2.959793] sd 0:0:0:0: [sda] W                                                                   rite Protect is off
+Sun May 12 03:41:59 2024 kern.debug kernel: [    2.960779] sd 0:0:0:0: [sda] Mo                                                                   de Sense: 43 00 00 00
+Sun May 12 03:41:59 2024 kern.notice kernel: [    2.962216] sd 0:0:0:0: [sda] W                                                                   rite cache: enabled, read cache: enabled, doesn't support DPO or FUA
+Sun May 12 03:41:59 2024 kern.info kernel: [    2.979819]  sda: sda1 sda2 sda3
+Sun May 12 03:41:59 2024 kern.notice kernel: [    2.982920] sd 0:0:0:0: [sda] A                                                                   ttached SCSI removable disk
+Sun May 12 03:41:59 2024 kern.info kernel: [    3.007910] EXT4-fs (sda2): mount                                                                   ed filesystem without journal. Opts: (null). Quota mode: disabled.
+Sun May 12 03:41:59 2024 kern.info kernel: [    3.009720] VFS: Mounted root (ex                                                                   t4 filesystem) readonly on device 8:2.
+Sun May 12 03:41:59 2024 kern.info kernel: [    3.011337] Freeing unused kernel                                                                    image (initmem) memory: 1604K
+Sun May 12 03:41:59 2024 kern.info kernel: [    3.315765] Write protecting the                                                                    kernel read-only data: 20480k
+Sun May 12 03:41:59 2024 kern.info kernel: [    3.317767] Freeing unused kernel                                                                    image (text/rodata gap) memory: 2044K
+Sun May 12 03:41:59 2024 kern.info kernel: [    3.319520] Freeing unused kernel                                                                    image (rodata/data gap) memory: 1676K
+Sun May 12 03:41:59 2024 kern.info kernel: [    3.320884] Run /sbin/init as ini                                                                   t process
+Sun May 12 03:41:59 2024 kern.debug kernel: [    3.321728]   with arguments:
+Sun May 12 03:41:59 2024 kern.debug kernel: [    3.321730]     /sbin/init
+Sun May 12 03:41:59 2024 kern.debug kernel: [    3.321732]   with environment:
+Sun May 12 03:41:59 2024 kern.debug kernel: [    3.321733]     HOME=/
+Sun May 12 03:41:59 2024 kern.debug kernel: [    3.321734]     TERM=linux
+Sun May 12 03:41:59 2024 kern.debug kernel: [    3.321736]     BOOT_IMAGE=/boot                                                                   /vmlinuz
+Sun May 12 03:41:59 2024 user.info kernel: [    3.770463] init: Console is aliv                                                                   e
+Sun May 12 03:41:59 2024 user.info kernel: [    3.773709] kmodloader: loading k                                                                   ernel modules from /etc/modules-boot.d/*
+Sun May 12 03:41:59 2024 kern.info kernel: [    3.796609] Button Hotplug driver                                                                    version 0.4.1
+Sun May 12 03:41:59 2024 kern.info kernel: [    3.800582] igb: Intel(R) Gigabit                                                                    Ethernet Network Driver
+Sun May 12 03:41:59 2024 kern.info kernel: [    3.801661] igb: Copyright (c) 20                                                                   07-2014 Intel Corporation.
+Sun May 12 03:41:59 2024 user.info kernel: [    3.802809] kmodloader: done load                                                                   ing kernel modules from /etc/modules-boot.d/*
+Sun May 12 03:41:59 2024 user.info kernel: [    3.812507] init: - preinit -
+Sun May 12 03:41:59 2024 user.notice kernel: [    5.956449] mount_root: mountin                                                                   g /dev/root
+Sun May 12 03:41:59 2024 kern.warn kernel: [    5.957434] EXT4-fs (sda2): warni                                                                   ng: mounting unchecked fs, running e2fsck is recommended
+Sun May 12 03:41:59 2024 kern.info kernel: [    5.975003] EXT4-fs (sda2): re-mo                                                                   unted. Opts: (null). Quota mode: disabled.
+Sun May 12 03:41:59 2024 kern.warn kernel: [    6.052117] FAT-fs (sda1): Volume                                                                    was not properly unmounted. Some data may be corrupt. Please run fsck.
+Sun May 12 03:41:59 2024 user.warn kernel: [    6.058314] urandom-seed: Seeding                                                                    with /etc/urandom.seed
+Sun May 12 03:41:59 2024 user.info kernel: [    6.063635] procd: - early -
+Sun May 12 03:41:59 2024 user.info kernel: [    6.577755] procd: - ubus -
+Sun May 12 03:41:59 2024 user.info kernel: [    6.630767] procd: - init -
+Sun May 12 03:41:59 2024 user.info kernel: [    6.695687] kmodloader: loading k                                                                   ernel modules from /etc/modules.d/*
+Sun May 12 03:41:59 2024 user.info kernel: [    6.699349] urngd: v1.0.2 started                                                                   .
+Sun May 12 03:41:59 2024 kern.info kernel: [    6.715836] e1000: Intel(R) PRO/1                                                                   000 Network Driver
+Sun May 12 03:41:59 2024 kern.info kernel: [    6.716806] e1000: Copyright (c)                                                                    1999-2006 Intel Corporation.
+Sun May 12 03:41:59 2024 kern.info kernel: [    6.723202] ixgbe: Intel(R) 10 Gi                                                                   gabit PCI Express Network Driver
+Sun May 12 03:41:59 2024 kern.info kernel: [    6.724404] ixgbe: Copyright (c)                                                                    1999-2016 Intel Corporation.
+Sun May 12 03:41:59 2024 kern.info kernel: [    6.726496] i2c_dev: i2c /dev ent                                                                   ries driver
+Sun May 12 03:41:59 2024 kern.info kernel: [    6.748984] Loading modules backp                                                                   orted from Linux version v6.1.24-0-g0102425ac76b
+Sun May 12 03:41:59 2024 kern.info kernel: [    6.750457] Backport generated by                                                                    backports.git v5.15.92-1-44-gd6ea70fafd36
+Sun May 12 03:41:59 2024 kern.info kernel: [    6.753234] e1000e: Intel(R) PRO/                                                                   1000 Network Driver
+Sun May 12 03:41:59 2024 kern.info kernel: [    6.754222] e1000e: Copyright(c)                                                                    1999 - 2015 Intel Corporation.
+Sun May 12 03:41:59 2024 kern.info kernel: [    6.755980] Intel(R) 2.5G Etherne                                                                   t Linux Driver
+Sun May 12 03:41:59 2024 kern.info kernel: [    6.756885] Copyright(c) 2018 Int                                                                   el Corporation.
+Sun May 12 03:41:59 2024 kern.info kernel: [    6.789913] r8169 0000:02:00.0 et                                                                   h0: RTL8125B, 84:47:09:32:c7:79, XID 641, IRQ 60
+Sun May 12 03:41:59 2024 kern.info kernel: [    6.791437] r8169 0000:02:00.0 et                                                                   h0: jumbo features [frames: 9194 bytes, tx checksumming: ko]
+Sun May 12 03:41:59 2024 kern.info kernel: [    6.830731] r8169 0000:03:00.0 et                                                                   h1: RTL8125B, 84:47:09:32:c7:7a, XID 641, IRQ 62
+Sun May 12 03:41:59 2024 kern.info kernel: [    6.832261] r8169 0000:03:00.0 et                                                                   h1: jumbo features [frames: 9194 bytes, tx checksumming: ko]
+Sun May 12 03:41:59 2024 kern.info kernel: [    6.835281] usbcore: registered n                                                                   ew interface driver cdc_ether
+Sun May 12 03:41:59 2024 kern.info kernel: [    6.852587] Intel(R) Wireless WiF                                                                   i driver for Linux
+Sun May 12 03:41:59 2024 kern.info kernel: [    6.890460] PPP generic driver ve                                                                   rsion 2.4.2
+Sun May 12 03:41:59 2024 kern.info kernel: [    6.891578] NET: Registered PF_PP                                                                   POX protocol family
+Sun May 12 03:41:59 2024 kern.info kernel: [    6.892934] usbcore: registered n                                                                   ew interface driver rndis_host
+Sun May 12 03:41:59 2024 kern.info kernel: [    6.918204] mt7921e 0000:04:00.0:                                                                    enabling device (0000 -> 0002)
+Sun May 12 03:41:59 2024 kern.info kernel: [    6.949227] mt7921e 0000:04:00.0:                                                                    ASIC revision: 79220010
+Sun May 12 03:41:59 2024 user.info kernel: [    7.040315] kmodloader: done load                                                                   ing kernel modules from /etc/modules.d/*
+Sun May 12 03:41:59 2024 kern.info kernel: [    7.046924] mt7921e 0000:04:00.0:                                                                    HW/SW Version: 0x8a108a10, Build Time: 20230530123154a
+Sun May 12 03:41:59 2024 kern.info kernel: [    7.046924]
+Sun May 12 03:41:59 2024 user.notice dnsmasq: DNS rebinding protection is activ                                                                   e, will discard upstream RFC1918 responses!
+Sun May 12 03:41:59 2024 user.notice dnsmasq: Allowing 127.0.0.0/8 responses
+Sun May 12 03:41:59 2024 daemon.info dnsmasq[1]: started, version 2.90 cachesiz                                                                   e 1000
+Sun May 12 03:41:59 2024 daemon.info dnsmasq[1]: DNS service limited to local s                                                                   ubnets
+Sun May 12 03:41:59 2024 daemon.info dnsmasq[1]: compile time options: IPv6 GNU                                                                   -getopt no-DBus UBus no-i18n no-IDN DHCP no-DHCPv6 no-Lua TFTP no-conntrack no-                                                                   ipset no-nftset no-auth no-cryptohash no-DNSSEC no-ID loop-detect inotify dumpf                                                                   ile
+Sun May 12 03:41:59 2024 daemon.info dnsmasq[1]: UBus support enabled: connecte                                                                   d to system bus
+Sun May 12 03:41:59 2024 daemon.info dnsmasq[1]: using only locally-known addre                                                                   sses for test
+Sun May 12 03:41:59 2024 daemon.info dnsmasq[1]: using only locally-known addre                                                                   sses for onion
+Sun May 12 03:41:59 2024 daemon.info dnsmasq[1]: using only locally-known addre                                                                   sses for localhost
+Sun May 12 03:41:59 2024 daemon.info dnsmasq[1]: using only locally-known addre                                                                   sses for local
+Sun May 12 03:41:59 2024 daemon.info dnsmasq[1]: using only locally-known addre                                                                   sses for invalid
+Sun May 12 03:41:59 2024 daemon.info dnsmasq[1]: using only locally-known addre                                                                   sses for bind
+Sun May 12 03:41:59 2024 daemon.info dnsmasq[1]: using only locally-known addre                                                                   sses for lan
+Sun May 12 03:41:59 2024 daemon.warn dnsmasq[1]: no servers found in /tmp/resol                                                                   v.conf.d/resolv.conf.auto, will retry
+Sun May 12 03:41:59 2024 daemon.info dnsmasq[1]: read /etc/hosts - 12 names
+Sun May 12 03:41:59 2024 daemon.info dnsmasq[1]: read /tmp/hosts/dhcp.cfg01411c                                                                    - 0 names
+Sun May 12 03:41:59 2024 authpriv.info dropbear[1545]: Not backgrounding
+Sun May 12 03:41:59 2024 user.notice : Added device handler type: bonding
+Sun May 12 03:41:59 2024 user.notice : Added device handler type: 8021ad
+Sun May 12 03:41:59 2024 user.notice : Added device handler type: 8021q
+Sun May 12 03:41:59 2024 user.notice : Added device handler type: macvlan
+Sun May 12 03:41:59 2024 user.notice : Added device handler type: veth
+Sun May 12 03:41:59 2024 user.notice : Added device handler type: bridge
+Sun May 12 03:41:59 2024 user.notice : Added device handler type: Network devic                                                                   e
+Sun May 12 03:41:59 2024 user.notice : Added device handler type: tunnel
+Sun May 12 03:41:59 2024 daemon.notice procd: /etc/rc.d/S25packet_steering: uci                                                                   : Entry not found
+Sun May 12 03:41:59 2024 kern.info kernel: [    7.463333] mt7921e 0000:04:00.0:                                                                    WM Firmware Version: ____000000, Build Time: 20230530123236
+Sun May 12 03:41:59 2024 user.notice ucitrack: Setting up /etc/config/dhcp relo                                                                   ad dependency on /etc/config/network
+Sun May 12 03:41:59 2024 user.notice ucitrack: Setting up /etc/config/network r                                                                   eload dependency on /etc/config/wireless
+Sun May 12 03:41:59 2024 user.notice ucitrack: Setting up /etc/config/luci-spla                                                                   sh reload dependency on /etc/config/firewall
+Sun May 12 03:41:59 2024 user.notice ucitrack: Setting up /etc/config/qos reloa                                                                   d dependency on /etc/config/firewall
+Sun May 12 03:41:59 2024 user.notice ucitrack: Setting up /etc/config/miniupnpd                                                                    reload dependency on /etc/config/firewall
+Sun May 12 03:41:59 2024 user.notice ucitrack: Setting up /etc/config/odhcpd re                                                                   load dependency on /etc/config/dhcp
+Sun May 12 03:41:59 2024 user.notice ucitrack: Setting up non-init /etc/config/                                                                   fstab reload handler: /sbin/block mount
+Sun May 12 03:41:59 2024 user.notice ucitrack: Setting up /etc/config/system re                                                                   load trigger for non-procd /etc/init.d/led
+Sun May 12 03:41:59 2024 user.notice ucitrack: Setting up /etc/config/luci_stat                                                                   istics reload dependency on /etc/config/system
+Sun May 12 03:41:59 2024 user.notice ucitrack: Setting up /etc/config/dhcp relo                                                                   ad dependency on /etc/config/system
+Sun May 12 03:41:59 2024 kern.info kernel: [    7.625771] RTL8226B_RTL8221B 2.5                                                                   Gbps PHY r8169-0-200:00: attached PHY driver (mii_bus:phy_addr=r8169-0-200:00,                                                                    irq=MAC)
+Sun May 12 03:42:00 2024 kern.notice kernel: [    7.944812] r8169 0000:02:00.0                                                                    eth0: No native access to PCI extended config space, falling back to CSI
+Sun May 12 03:42:00 2024 kern.info kernel: [    7.985854] r8169 0000:02:00.0 et                                                                   h0: Link is Down
+Sun May 12 03:42:00 2024 kern.info kernel: [    7.987034] br-lan: port 1(eth0)                                                                    entered blocking state
+Sun May 12 03:42:00 2024 kern.info kernel: [    7.988111] br-lan: port 1(eth0)                                                                    entered disabled state
+Sun May 12 03:42:00 2024 kern.info kernel: [    7.989368] device eth0 entered p                                                                   romiscuous mode
+Sun May 12 03:42:00 2024 daemon.notice netifd: Interface 'lan' is enabled
+Sun May 12 03:42:00 2024 daemon.notice netifd: Interface 'lan' is setting up no                                                                   w
+Sun May 12 03:42:00 2024 daemon.notice netifd: Interface 'lan' is now up
+Sun May 12 03:42:00 2024 daemon.notice netifd: Interface 'loopback' is enabled
+Sun May 12 03:42:00 2024 daemon.notice netifd: Interface 'loopback' is setting                                                                    up now
+Sun May 12 03:42:00 2024 daemon.notice netifd: Interface 'loopback' is now up
+Sun May 12 03:42:00 2024 user.notice firewall: Reloading firewall due to ifup o                                                                   f lan (br-lan)
+Sun May 12 03:42:00 2024 kern.info kernel: [    8.115744] RTL8226B_RTL8221B 2.5                                                                   Gbps PHY r8169-0-300:00: attached PHY driver (mii_bus:phy_addr=r8169-0-300:00,                                                                    irq=MAC)
+Sun May 12 03:42:00 2024 daemon.notice netifd: Interface 'wan' is enabled
+Sun May 12 03:42:00 2024 daemon.notice netifd: Interface 'wan6' is enabled
+Sun May 12 03:42:00 2024 daemon.notice netifd: Network device 'lo' link is up
+Sun May 12 03:42:00 2024 daemon.notice netifd: Interface 'loopback' has link co                                                                   nnectivity
+Sun May 12 03:42:00 2024 daemon.notice netifd: radio0 (2296): WARNING: Variable                                                                    'data' does not exist or is not an array/object
+Sun May 12 03:42:00 2024 kern.info kernel: [    8.475857] r8169 0000:03:00.0 et                                                                   h1: Link is Down
+Sun May 12 03:42:00 2024 daemon.notice netifd: radio0 (2296): Phy not found
+Sun May 12 03:42:00 2024 daemon.notice netifd: radio0 (2296): Could not find PH                                                                   Y for device 'radio0'
+Sun May 12 03:42:00 2024 daemon.notice netifd: Wireless device 'radio0' set ret                                                                   ry=0
+Sun May 12 03:42:00 2024 daemon.crit netifd: Wireless device 'radio0' setup fai                                                                   led, retry=0
+Sun May 12 03:42:00 2024 daemon.info procd: - init complete -
+Sun May 12 03:42:00 2024 daemon.notice netifd: radio0 (2320): WARNING: Variable                                                                    'data' does not exist or is not an array/object
+Sun May 12 03:42:00 2024 daemon.notice netifd: radio0 (2320): Bug: PHY is undef                                                                   ined for device 'radio0'
+Sun May 12 03:42:00 2024 daemon.notice netifd: Wireless device 'radio0' is now                                                                    down
+Sun May 12 03:42:01 2024 daemon.notice netifd: Network device 'eth0' link is up
+Sun May 12 03:42:01 2024 daemon.notice netifd: bridge 'br-lan' link is up
+Sun May 12 03:42:01 2024 daemon.notice netifd: Interface 'lan' has link connect                                                                   ivity
+Sun May 12 03:42:01 2024 kern.info kernel: [    9.499709] r8169 0000:02:00.0 et                                                                   h0: Link is Up - 100Mbps/Full - flow control off
+Sun May 12 03:42:01 2024 kern.info kernel: [    9.501268] br-lan: port 1(eth0)                                                                    entered blocking state
+Sun May 12 03:42:01 2024 kern.info kernel: [    9.502344] br-lan: port 1(eth0)                                                                    entered forwarding state
+Sun May 12 03:42:01 2024 kern.info kernel: [    9.503600] IPv6: ADDRCONF(NETDEV                                                                   _CHANGE): br-lan: link becomes ready
+Sun May 12 03:42:02 2024 daemon.err odhcpd[1824]: Failed to send to fe80::f0d4:                                                                   e42c:78d2:a334%lan@br-lan (Address not available)
+Sun May 12 03:42:02 2024 daemon.info dnsmasq[1]: read /etc/hosts - 12 names
+Sun May 12 03:42:02 2024 daemon.info dnsmasq[1]: read /tmp/hosts/dhcp.cfg01411c                                                                    - 0 names
+Sun May 12 03:42:02 2024 daemon.info dnsmasq[1]: read /tmp/hosts/dhcp.cfg01411c                                                                   .2463 - 0 names
+Sun May 12 03:42:02 2024 daemon.info dnsmasq[1]: read /tmp/hosts/odhcpd - 0 nam                                                                   es
+Sun May 12 03:42:03 2024 daemon.err odhcpd[1824]: Failed to send to fe80::f0d4:                                                                   e42c:78d2:a334%lan@br-lan (Address not available)
+Sun May 12 03:42:04 2024 daemon.info dnsmasq[1]: read /etc/hosts - 12 names
+Sun May 12 03:42:04 2024 daemon.info dnsmasq[1]: read /tmp/hosts/dhcp.cfg01411c                                                                    - 0 names
+Sun May 12 03:42:04 2024 daemon.info dnsmasq[1]: read /tmp/hosts/dhcp.cfg01411c                                                                   .2463 - 0 names
+Sun May 12 03:42:04 2024 daemon.info dnsmasq[1]: read /tmp/hosts/odhcpd - 2 nam                                                                   es
+Sun May 12 03:42:05 2024 daemon.info dnsmasq[1]: exiting on receipt of SIGTERM
+Sun May 12 03:42:05 2024 daemon.info dnsmasq[1]: started, version 2.90 cachesiz                                                                   e 1000
+Sun May 12 03:42:05 2024 daemon.info dnsmasq[1]: DNS service limited to local s                                                                   ubnets
+Sun May 12 03:42:05 2024 daemon.info dnsmasq[1]: compile time options: IPv6 GNU                                                                   -getopt no-DBus UBus no-i18n no-IDN DHCP no-DHCPv6 no-Lua TFTP no-conntrack no-                                                                   ipset no-nftset no-auth no-cryptohash no-DNSSEC no-ID loop-detect inotify dumpf                                                                   ile
+Sun May 12 03:42:05 2024 daemon.info dnsmasq[1]: UBus support enabled: connecte                                                                   d to system bus
+Sun May 12 03:42:05 2024 daemon.info dnsmasq-dhcp[1]: DHCP, IP range 192.168.1.                                                                   100 -- 192.168.1.249, lease time 12h
+Sun May 12 03:42:05 2024 daemon.info dnsmasq[1]: using only locally-known addre                                                                   sses for test
+Sun May 12 03:42:05 2024 daemon.info dnsmasq[1]: using only locally-known addre                                                                   sses for onion
+Sun May 12 03:42:05 2024 daemon.info dnsmasq[1]: using only locally-known addre                                                                   sses for localhost
+Sun May 12 03:42:05 2024 daemon.info dnsmasq[1]: using only locally-known addre                                                                   sses for local
+Sun May 12 03:42:05 2024 daemon.info dnsmasq[1]: using only locally-known addre                                                                   sses for invalid
+Sun May 12 03:42:05 2024 daemon.info dnsmasq[1]: using only locally-known addre                                                                   sses for bind
+Sun May 12 03:42:05 2024 daemon.info dnsmasq[1]: using only locally-known addre                                                                   sses for lan
+Sun May 12 03:42:05 2024 daemon.warn dnsmasq[1]: no servers found in /tmp/resol                                                                   v.conf.d/resolv.conf.auto, will retry
+Sun May 12 03:42:05 2024 daemon.info dnsmasq[1]: read /etc/hosts - 12 names
+Sun May 12 03:42:05 2024 daemon.info dnsmasq[1]: read /tmp/hosts/dhcp.cfg01411c                                                                    - 4 names
+Sun May 12 03:42:05 2024 daemon.info dnsmasq[1]: read /tmp/hosts/odhcpd - 2 nam                                                                   es
+Sun May 12 03:42:05 2024 daemon.info dnsmasq-dhcp[1]: read /etc/ethers - 0 addr                                                                   esses
+Sun May 12 03:42:05 2024 daemon.info dnsmasq[1]: read /etc/hosts - 12 names
+Sun May 12 03:42:05 2024 daemon.info dnsmasq[1]: read /tmp/hosts/dhcp.cfg01411c                                                                    - 4 names
+Sun May 12 03:42:05 2024 daemon.info dnsmasq[1]: read /tmp/hosts/odhcpd - 2 nam                                                                   es
+Sun May 12 03:42:05 2024 daemon.info dnsmasq-dhcp[1]: read /etc/ethers - 0 addr                                                                   esses
+Sun May 12 03:42:06 2024 daemon.notice netifd: Network device 'eth1' link is up
+Sun May 12 03:42:06 2024 daemon.notice netifd: Interface 'wan' has link connect                                                                   ivity
+Sun May 12 03:42:06 2024 daemon.notice netifd: Interface 'wan' is setting up no                                                                   w
+Sun May 12 03:42:06 2024 daemon.notice netifd: Interface 'wan6' has link connec                                                                   tivity
+Sun May 12 03:42:06 2024 daemon.notice netifd: Interface 'wan6' is setting up n                                                                   ow
+Sun May 12 03:42:06 2024 kern.warn kernel: [   13.862649] RTL8226B_RTL8221B 2.5                                                                   Gbps PHY r8169-0-300:00: Downshift occurred from negotiated speed 1Gbps to actu                                                                   al speed 100Mbps, check cabling!
+Sun May 12 03:42:06 2024 kern.info kernel: [   13.865296] r8169 0000:03:00.0 et                                                                   h1: Link is Up - 100Mbps/Full (downshifted) - flow control off
+Sun May 12 03:42:06 2024 kern.info kernel: [   13.867088] IPv6: ADDRCONF(NETDEV                                                                   _CHANGE): eth1: link becomes ready
+Sun May 12 03:42:06 2024 daemon.notice netifd: wan (2944): udhcpc: started, v1.                                                                   36.1
+Sun May 12 03:42:06 2024 daemon.err odhcp6c[2942]: Failed to send RS (Address n                                                                   ot available)
+Sun May 12 03:42:06 2024 daemon.warn odhcpd[1824]: No default route present, ov                                                                   erriding ra_lifetime!
+Sun May 12 03:42:06 2024 daemon.notice netifd: wan (2944): udhcpc: broadcasting                                                                    discover
+Sun May 12 03:42:06 2024 daemon.err odhcp6c[2942]: Failed to send SOLICIT messa                                                                   ge to ff02::1:2 (Address not available)
+Sun May 12 03:42:07 2024 daemon.notice netifd: wan (2944): udhcpc: broadcasting                                                                    select for 139.1.4.75, server 139.1.5.254
+Sun May 12 03:42:07 2024 daemon.err odhcp6c[2942]: Failed to send SOLICIT messa                                                                   ge to ff02::1:2 (Address not available)
+Sun May 12 03:42:07 2024 daemon.notice netifd: wan (2944): udhcpc: lease of 139                                                                   .1.4.75 obtained from 139.1.5.254, lease time 3600
+Sun May 12 03:42:07 2024 daemon.notice netifd: Interface 'wan' is now up
+Sun May 12 03:42:07 2024 user.notice firewall: Reloading firewall due to ifup o                                                                   f wan (eth1)
+Sun May 12 03:42:08 2024 daemon.warn odhcpd[1824]: No default route present, ov                                                                   erriding ra_lifetime!
+Sun May 12 03:42:10 2024 daemon.warn odhcpd[1824]: No default route present, ov                                                                   erriding ra_lifetime!
+Sun May 12 03:42:11 2024 daemon.info dnsmasq-dhcp[1]: DHCPDISCOVER(br-lan) 00:e                                                                   0:4c:36:04:0e
+Sun May 12 03:42:11 2024 daemon.info dnsmasq-dhcp[1]: DHCPOFFER(br-lan) 192.168                                                                   .1.132 00:e0:4c:36:04:0e
+Sun May 12 03:42:11 2024 daemon.info dnsmasq[1]: reading /tmp/resolv.conf.d/res                                                                   olv.conf.auto
+Sun May 12 03:42:11 2024 daemon.info dnsmasq[1]: using nameserver 61.139.2.69#5                                                                   3
+Sun May 12 03:42:11 2024 daemon.info dnsmasq[1]: using nameserver 8.8.8.8#53
+Sun May 12 03:42:11 2024 daemon.info dnsmasq[1]: using only locally-known addre                                                                   sses for test
+Sun May 12 03:42:11 2024 daemon.info dnsmasq[1]: using only locally-known addre                                                                   sses for onion
+Sun May 12 03:42:11 2024 daemon.info dnsmasq[1]: using only locally-known addre                                                                   sses for localhost
+Sun May 12 03:42:11 2024 daemon.info dnsmasq[1]: using only locally-known addre                                                                   sses for local
+Sun May 12 03:42:11 2024 daemon.info dnsmasq[1]: using only locally-known addre                                                                   sses for invalid
+Sun May 12 03:42:11 2024 daemon.info dnsmasq[1]: using only locally-known addre                                                                   sses for bind
+Sun May 12 03:42:11 2024 daemon.info dnsmasq[1]: using only locally-known addre                                                                   sses for lan
+Sun May 12 03:42:11 2024 daemon.info dnsmasq-dhcp[1]: DHCPREQUEST(br-lan) 192.1                                                                   68.1.132 00:e0:4c:36:04:0e
+Sun May 12 03:42:11 2024 daemon.info dnsmasq-dhcp[1]: DHCPACK(br-lan) 192.168.1                                                                   .132 00:e0:4c:36:04:0e LAPTOP-HE6F4I6O
+Sun May 12 03:42:13 2024 daemon.err uhttpd[1938]: [info] luci: accepted login o                                                                   n /admin/network/network for root from 192.168.1.132
+Sun May 12 03:42:24 2024 daemon.warn odhcpd[1824]: No default route present, ov                                                                   erriding ra_lifetime!
+Sun May 12 03:42:45 2024 daemon.info dnsmasq[1]: exiting on receipt of SIGTERM
+Sun May 12 03:42:45 2024 daemon.info dnsmasq[1]: started, version 2.90 cachesiz                                                                   e 1000
+Sun May 12 03:42:45 2024 daemon.info dnsmasq[1]: DNS service limited to local s                                                                   ubnets
+Sun May 12 03:42:45 2024 daemon.info dnsmasq[1]: compile time options: IPv6 GNU                                                                   -getopt no-DBus UBus no-i18n no-IDN DHCP no-DHCPv6 no-Lua TFTP no-conntrack no-                                                                   ipset no-nftset no-auth no-cryptohash no-DNSSEC no-ID loop-detect inotify dumpf                                                                   ile
+Sun May 12 03:42:45 2024 daemon.info dnsmasq[1]: UBus support enabled: connecte                                                                   d to system bus
+Sun May 12 03:42:45 2024 daemon.info dnsmasq-dhcp[1]: DHCP, IP range 192.168.1.                                                                   100 -- 192.168.1.249, lease time 12h
+Sun May 12 03:42:45 2024 daemon.info dnsmasq[1]: using only locally-known addre                                                                   sses for test
+Sun May 12 03:42:45 2024 daemon.info dnsmasq[1]: using only locally-known addre                                                                   sses for onion
+Sun May 12 03:42:45 2024 daemon.info dnsmasq[1]: using only locally-known addre                                                                   sses for localhost
+Sun May 12 03:42:45 2024 daemon.info dnsmasq[1]: using only locally-known addre                                                                   sses for local
+Sun May 12 03:42:45 2024 daemon.info dnsmasq[1]: using only locally-known addre                                                                   sses for invalid
+Sun May 12 03:42:45 2024 daemon.info dnsmasq[1]: using only locally-known addre                                                                   sses for bind
+Sun May 12 03:42:45 2024 daemon.info dnsmasq[1]: using only locally-known addre                                                                   sses for lan
+Sun May 12 03:42:45 2024 daemon.info dnsmasq[1]: reading /tmp/resolv.conf.d/res                                                                   olv.conf.auto
+Sun May 12 03:42:45 2024 daemon.info dnsmasq[1]: using nameserver 61.139.2.69#5                                                                   3
+Sun May 12 03:42:45 2024 daemon.info dnsmasq[1]: using nameserver 8.8.8.8#53
+Sun May 12 03:42:45 2024 daemon.info dnsmasq[1]: using only locally-known addre                                                                   sses for test
+Sun May 12 03:42:45 2024 daemon.info dnsmasq[1]: using only locally-known addre                                                                   sses for onion
+Sun May 12 03:42:45 2024 daemon.info dnsmasq[1]: using only locally-known addre                                                                   sses for localhost
+Sun May 12 03:42:45 2024 daemon.info dnsmasq[1]: using only locally-known addre                                                                   sses for local
+Sun May 12 03:42:45 2024 daemon.info dnsmasq[1]: using only locally-known addre                                                                   sses for invalid
+Sun May 12 03:42:45 2024 daemon.info dnsmasq[1]: using only locally-known addre                                                                   sses for bind
+Sun May 12 03:42:45 2024 daemon.info dnsmasq[1]: using only locally-known addre                                                                   sses for lan
+Sun May 12 03:42:45 2024 daemon.info dnsmasq[1]: read /etc/hosts - 12 names
+Sun May 12 03:42:45 2024 daemon.info dnsmasq[1]: read /tmp/hosts/dhcp.cfg01411c                                                                    - 4 names
+Sun May 12 03:42:45 2024 daemon.info dnsmasq[1]: read /tmp/hosts/odhcpd - 2 nam                                                                   es
+Sun May 12 03:42:45 2024 daemon.info dnsmasq-dhcp[1]: read /etc/ethers - 0 addr                                                                   esses
+Sun May 12 03:42:46 2024 daemon.warn odhcpd[1824]: No default route present, ov                                                                   erriding ra_lifetime!
+Sun May 12 03:42:50 2024 daemon.notice netifd: radio0 (3516): WARNING: Variable                                                                    'data' does not exist or is not an array/object
+Sun May 12 03:42:50 2024 daemon.notice netifd: radio0 (3516): Command failed: N                                                                   ot found
+Sun May 12 03:42:50 2024 daemon.notice netifd: radio0 (3516): Command failed: N                                                                   ot found
+Sun May 12 03:42:51 2024 daemon.notice netifd: radio0 (3516): ./mac80211.sh: ev                                                                   al: line 597: /usr/sbin/hostapd: not found
+Sun May 12 03:42:51 2024 daemon.notice netifd: Wireless device 'radio0' is now                                                                    up
+Sun May 12 03:42:53 2024 daemon.info dnsmasq[1]: read /etc/hosts - 12 names
+Sun May 12 03:42:53 2024 daemon.info dnsmasq[1]: read /tmp/hosts/dhcp.cfg01411c                                                                    - 4 names
+Sun May 12 03:42:53 2024 daemon.info dnsmasq[1]: read /tmp/hosts/odhcpd - 2 nam                                                                   es
+Sun May 12 03:42:53 2024 daemon.info dnsmasq-dhcp[1]: read /etc/ethers - 0 addr                                                                   esses
+Sun May 12 03:42:53 2024 authpriv.info dropbear[3820]: Child connection from 19                                                                   2.168.1.132:49911
+Sun May 12 03:42:54 2024 daemon.warn odhcpd[1824]: No default route present, ov                                                                   erriding ra_lifetime!
+Sun May 12 03:42:55 2024 authpriv.notice dropbear[3820]: Auth succeeded with bl                                                                   ank password for 'root' from 192.168.1.132:49911
+Sun May 12 03:46:40 2024 daemon.notice netifd: radio0 (4498): ./mac80211.sh: ev                                                                   al: line 597: /usr/sbin/hostapd: not found
+Sun May 12 03:46:40 2024 daemon.notice netifd: Wireless device 'radio0' is now                                                                    up
+Sun May 12 03:46:41 2024 daemon.info dnsmasq[1]: read /etc/hosts - 12 names
+Sun May 12 03:46:41 2024 daemon.info dnsmasq[1]: read /tmp/hosts/dhcp.cfg01411c                                                                    - 4 names
+Sun May 12 03:46:41 2024 daemon.info dnsmasq[1]: read /tmp/hosts/odhcpd - 2 nam                                                                   es
+Sun May 12 03:46:41 2024 daemon.info dnsmasq-dhcp[1]: read /etc/ethers - 0 addr                                                                   esses
+Sun May 12 03:46:42 2024 daemon.warn odhcpd[1824]: No default route present, ov                                                                   erriding ra_lifetime!
+Sun May 12 03:46:42 2024 daemon.info dnsmasq[1]: read /etc/hosts - 12 names
+Sun May 12 03:46:42 2024 daemon.info dnsmasq[1]: read /tmp/hosts/dhcp.cfg01411c                                                                    - 4 names
+Sun May 12 03:46:42 2024 daemon.info dnsmasq[1]: read /tmp/hosts/odhcpd - 2 nam                                                                   es
+Sun May 12 03:46:42 2024 daemon.info dnsmasq-dhcp[1]: read /etc/ethers - 0 addr                                                                   esses
+Sun May 12 03:46:43 2024 daemon.warn odhcpd[1824]: No default route present, ov                                                                   erriding ra_lifetime!
+Sun May 12 03:48:47 2024 daemon.notice netifd: radio0 (5305): ./mac80211.sh: ev                                                                   al: line 597: /usr/sbin/hostapd: not found
+Sun May 12 03:48:47 2024 daemon.notice netifd: Wireless device 'radio0' is now                                                                    up
+Sun May 12 03:48:49 2024 daemon.info dnsmasq[1]: read /etc/hosts - 12 names
+Sun May 12 03:48:49 2024 daemon.info dnsmasq[1]: read /tmp/hosts/dhcp.cfg01411c                                                                    - 4 names
+Sun May 12 03:48:49 2024 daemon.info dnsmasq[1]: read /tmp/hosts/odhcpd - 2 nam                                                                   es
+Sun May 12 03:48:49 2024 daemon.info dnsmasq-dhcp[1]: read /etc/ethers - 0 addr                                                                   esses
+Sun May 12 03:48:50 2024 daemon.warn odhcpd[1824]: No default route present, ov                                                                   erriding ra_lifetime!
+Sun May 12 03:58:16 2024 daemon.warn odhcpd[1824]: No default route present, ov                                                                   erriding ra_lifetime!
+Sun May 12 03:58:51 2024 authpriv.info dropbear[6878]: Child connection from 19                                                                   2.168.1.132:50264
+Sun May 12 03:58:53 2024 authpriv.info dropbear[6878]: Exit before auth from <1                                                                   92.168.1.132:50264>: Exited normally
+Sun May 12 04:05:30 2024 daemon.warn odhcpd[1824]: No default route present, ov                                                                   erriding ra_lifetime!
